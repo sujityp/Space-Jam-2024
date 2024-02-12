@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://qys8fjsa36ns"]
+
+[ext_resource type="Texture2D" uid="uid://baau5xpyo45b7" path="res://Assets/Art/pam_moon.png" id="1_ihr08"]
+
+[node name="PamMoon" type="Sprite2D"]
+position = Vector2(512, 300)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ihr08")
