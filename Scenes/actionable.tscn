@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://i7tvyvyf6vpc"]
+
+[ext_resource type="Script" path="res://Scenes/Actionable.gd" id="1_4nf3h"]
+[ext_resource type="Resource" uid="uid://dygy5dodesqs4" path="res://Dialogue/testdialogue.dialogue" id="2_pebve"]
+
+[node name="Actionable" type="Area2D"]
+script = ExtResource("1_4nf3h")
+dialogue_resource = ExtResource("2_pebve")
+dialogue_start = "this_is_a_node_title"
