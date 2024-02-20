@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv5t7ifas7vf6"]
+
+[ext_resource type="Script" path="res://test_gravity/asteroid.gd" id="1_bp6kt"]
+[ext_resource type="Texture2D" uid="uid://didupvkvdxk17" path="res://test_gravity/assets/dcvmnw6-d6e475b2-eaa7-4010-99e7-68b3be48ba04.png" id="2_caoo7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ejbe"]
+radius = 119.541
+
+[node name="asteroid" type="Area2D"]
+position = Vector2(790, 301)
+scale = Vector2(0.5, 0.5)
+collision_layer = 0
+script = ExtResource("1_bp6kt")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_caoo7")
+region_enabled = true
+region_rect = Rect2(57.9757, 1268.99, 304.332, 276.372)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4ejbe")
