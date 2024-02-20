@@ -27,14 +27,20 @@ func _physics_process(delta):
 		velocity += thrust*direction
 		if velocity.length() > max_speed:
 			velocity = velocity.normalized()*max_speed
+
+	#if velocity.x >= 0:
+		#$Camera2D.offset.x = move_toward($Camera2D.offset.x, 300, 10)
+		#print($Camera2D.offset.x)
+	#else :
+		#$Camera2D.offset.x = move_toward($Camera2D.offset.x, -300, -10)
+		#print($Camera2D.offset.x)
+
 	move_and_slide()
 	
-	if position.y > 600:
-		position.y = 600
-		velocity.y = 0
-	elif position.y < 0:
-		position.y = 0
-		velocity.y = 0
+	if position.y > 800:
+		position.y = -60
+	elif position.y < -60:
+		position.y = 800
 
 
 
@@ -61,4 +67,3 @@ func _on_animated_sprite_2d_animation_finished():
 	thrust = 20
 	$AnimatedSprite2D.hide()
 	$Sprite2D.show()
-	$CollisionShape2D.set_deferred("disabled", false)
