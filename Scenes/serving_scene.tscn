@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://kjhubacv4sqm"]
+
+[ext_resource type="Script" path="res://Scenes/serving_scene.gd" id="1_7w6x7"]
+[ext_resource type="Texture2D" uid="uid://b5rn6smqiout2" path="res://Assets/Art/space sky.jpg" id="1_447lt"]
+[ext_resource type="Texture2D" uid="uid://cvjsd7xtri8qv" path="res://Assets/Art/moon temp.png" id="2_j7p11"]
+[ext_resource type="Script" path="res://Scenes/CameraPosition.gd" id="5_hd6xy"]
+[ext_resource type="Texture2D" uid="uid://dxemfsbxbjqqa" path="res://Assets/Art/red arrow.png" id="5_j2hcm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5ugk"]
+size = Vector2(9010.29, 633.156)
+
+[node name="ServingScene" type="Node2D"]
+script = ExtResource("1_7w6x7")
+metadata/_edit_lock_ = true
+
+[node name="TempMoon" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(1071, 302)
+scale = Vector2(0.667964, 0.667964)
+texture = ExtResource("1_447lt")
+region_enabled = true
+region_rect = Rect2(0, 0, 3208, 904)
+metadata/_edit_lock_ = true
+
+[node name="MoonTemp" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(1279, 492)
+scale = Vector2(0.246385, 0.246385)
+texture = ExtResource("2_j7p11")
+region_enabled = true
+region_rect = Rect2(0, 0, 12000, 899)
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(1084, 592)
+scale = Vector2(0.246385, 0.246385)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_q5ugk")
+metadata/_edit_lock_ = true
+
+[node name="RedArrow" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(65, 450)
+scale = Vector2(0.1, 0.02)
+metadata/_edit_group_ = true
+
+[node name="RedArrowSprite" type="Sprite2D" parent="RedArrow"]
+position = Vector2(960, 0.00508626)
+texture = ExtResource("5_j2hcm")
+
+[node name="CameraPosition" type="Marker2D" parent="." node_paths=PackedStringArray("returnNode")]
+unique_name_in_owner = true
+position = Vector2(65, 450)
+scale = Vector2(0.1, 0.02)
+script = ExtResource("5_hd6xy")
+returnNode = NodePath("../RedArrow")
+
+[node name="Camera" type="Camera2D" parent="CameraPosition"]
+scale = Vector2(10, 50)
+limit_left = 0
+limit_top = 0
+limit_right = 2048
+limit_bottom = 600
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
