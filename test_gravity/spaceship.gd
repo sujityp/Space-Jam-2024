@@ -12,6 +12,7 @@ var right_held = false
 
 
 func _ready():
+	position = Vector2(86,305)
 	$AnimatedSprite2D.hide()
 
 

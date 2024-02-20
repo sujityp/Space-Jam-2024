@@ -190,5 +190,13 @@ position_smoothing_enabled = true
 sprite_frames = SubResource("SpriteFrames_d8fu7")
 animation = &"explode"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 259.0
+offset_top = 20.0
+offset_right = 376.0
+offset_bottom = 43.0
+scale = Vector2(2, 2)
+text = "Park The Ekcle!"
+
 [connection signal="body_entered" from="Parking_lot" to="." method="_on_parking_lot_body_entered"]
 [connection signal="animation_finished" from="spaceship/AnimatedSprite2D" to="spaceship" method="_on_animated_sprite_2d_animation_finished"]
