@@ -12,6 +12,8 @@ var red_arrow_max_scale_y = 0.02
 var launched = false
 var Projectile = preload("res://Scenes/projectile.tscn")
 
+signal minigame_won
+
 
 func _ready():
 	RedArrow.scale = Vector2(0, red_arrow_max_scale_y)
@@ -42,3 +44,7 @@ func _process(delta):
 func returnCamera():
 	CameraPosition.following = false
 	launched = false
+
+
+func _on_win_area_customer_served():
+	emit_signal("minigame_won")

@@ -8,10 +8,8 @@ extends CharacterBody2D
 signal floored
 
 func _ready():
-	print(degrees, "\t", magnitude)
 	var direction = Vector2.RIGHT.rotated(deg_to_rad(degrees))
 	velocity = direction * magnitude
-	print(velocity)
 
 func _physics_process(delta):
 	if not is_on_floor() and (position.y < 600):

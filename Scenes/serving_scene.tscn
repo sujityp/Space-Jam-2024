@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://kjhubacv4sqm"]
+[gd_scene load_steps=9 format=3 uid="uid://kjhubacv4sqm"]
 
 [ext_resource type="Script" path="res://Scenes/serving_scene.gd" id="1_7w6x7"]
 [ext_resource type="Texture2D" uid="uid://b5rn6smqiout2" path="res://Assets/Art/space sky.jpg" id="1_447lt"]
 [ext_resource type="Texture2D" uid="uid://cvjsd7xtri8qv" path="res://Assets/Art/moon temp.png" id="2_j7p11"]
 [ext_resource type="Script" path="res://Scenes/CameraPosition.gd" id="5_hd6xy"]
 [ext_resource type="Texture2D" uid="uid://dxemfsbxbjqqa" path="res://Assets/Art/red arrow.png" id="5_j2hcm"]
+[ext_resource type="Script" path="res://Scenes/WinArea.gd" id="6_ricvc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5ugk"]
 size = Vector2(9010.29, 633.156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h42qe"]
+size = Vector2(145, 56)
 
 [node name="ServingScene" type="Node2D"]
 script = ExtResource("1_7w6x7")
@@ -66,3 +70,14 @@ limit_right = 2048
 limit_bottom = 600
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
+
+[node name="WinArea" type="Area2D" parent="."]
+position = Vector2(1796, 373)
+script = ExtResource("6_ricvc")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea"]
+shape = SubResource("RectangleShape2D_h42qe")
+
+[connection signal="body_entered" from="WinArea" to="WinArea" method="_on_body_entered"]
+[connection signal="customer_served" from="WinArea" to="." method="_on_win_area_customer_served"]
