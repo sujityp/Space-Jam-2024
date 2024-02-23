@@ -12,6 +12,7 @@ func _ready():
 	velocity = direction * magnitude
 
 func _physics_process(delta):
+	rotation = atan2(velocity.y, velocity.x)
 	if not is_on_floor() and (position.y < 600):
 		velocity += gravity * delta
 	else:
