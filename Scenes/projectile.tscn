@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5ph1656653ln"]
+
+[ext_resource type="Script" path="res://Scenes/projectile.gd" id="1_eafff"]
+[ext_resource type="Texture2D" uid="uid://bnar3awjvnt5s" path="res://Assets/Art/food.png" id="2_1wc70"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gnr7c"]
+height = 62.0
+
+[node name="Projectile" type="CharacterBody2D" groups=["player"]]
+collision_mask = 6
+script = ExtResource("1_eafff")
+
+[node name="AngryBird" type="Sprite2D" parent="."]
+position = Vector2(0, -9.53674e-07)
+scale = Vector2(0.0767918, 0.0438449)
+texture = ExtResource("2_1wc70")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gnr7c")

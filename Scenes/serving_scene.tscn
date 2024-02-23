@@ -1,0 +1,178 @@
+[gd_scene load_steps=14 format=3 uid="uid://kjhubacv4sqm"]
+
+[ext_resource type="Script" path="res://Scenes/serving_scene.gd" id="1_7w6x7"]
+[ext_resource type="Texture2D" uid="uid://b4dmth5mds4cr" path="res://Assets/Art/serving mingame background.png" id="2_7tuor"]
+[ext_resource type="Script" path="res://Scenes/CameraPosition.gd" id="5_hd6xy"]
+[ext_resource type="Texture2D" uid="uid://dxemfsbxbjqqa" path="res://Assets/Art/red arrow.png" id="5_j2hcm"]
+[ext_resource type="Script" path="res://Scenes/WinArea.gd" id="6_ricvc"]
+[ext_resource type="Texture2D" uid="uid://dbkvigmtsiv3v" path="res://Assets/Art/launcher_barrel.png" id="7_fw38n"]
+[ext_resource type="Texture2D" uid="uid://b5k6sfbqvvqt4" path="res://Assets/Art/TableFinal.png" id="7_oh47h"]
+[ext_resource type="Texture2D" uid="uid://dhbnisgjj65qs" path="res://Assets/Art/launcher_tripod.png" id="8_ly8us"]
+[ext_resource type="PackedScene" uid="uid://bxerrlljbn0l6" path="res://Scenes/sign.tscn" id="9_x5hlm"]
+[ext_resource type="FontFile" uid="uid://b2cpl8itp7g4j" path="res://Assets/Fonts/the_orb_report/The-Orb-Report.ttf" id="10_ko1w7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5ugk"]
+size = Vector2(9010.29, 633.156)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_chd5n"]
+radius = 85.7877
+height = 841.531
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h42qe"]
+size = Vector2(217.5, 59)
+
+[node name="ServingScene" type="Node2D"]
+script = ExtResource("1_7w6x7")
+metadata/_edit_lock_ = true
+
+[node name="Sky" type="Sprite2D" parent="."]
+z_index = -500
+texture_repeat = 2
+position = Vector2(1024, 300)
+texture = ExtResource("2_7tuor")
+region_enabled = true
+region_rect = Rect2(0, 0, 2048, 600)
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="StaticBody2D" parent="Sky"]
+position = Vector2(60, 292)
+scale = Vector2(0.246385, 0.246385)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sky/Ground"]
+shape = SubResource("RectangleShape2D_q5ugk")
+metadata/_edit_lock_ = true
+
+[node name="LauncherTripod" type="Sprite2D" parent="."]
+position = Vector2(102, 487)
+scale = Vector2(0.0810526, 0.0810526)
+texture = ExtResource("8_ly8us")
+
+[node name="RedArrow" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(117, 444)
+scale = Vector2(0.1, 0.02)
+
+[node name="RedArrowSprite" type="Sprite2D" parent="RedArrow"]
+position = Vector2(140, -2950)
+texture = ExtResource("5_j2hcm")
+
+[node name="LauncherBarrel" type="Sprite2D" parent="RedArrow"]
+position = Vector2(190, -50)
+scale = Vector2(1.37759, 10.0962)
+texture = ExtResource("7_fw38n")
+
+[node name="ProjectileSpawn" type="Marker2D" parent="RedArrow"]
+unique_name_in_owner = true
+position = Vector2(1110, -1200)
+
+[node name="CameraPosition" type="Marker2D" parent="." node_paths=PackedStringArray("returnNode")]
+unique_name_in_owner = true
+position = Vector2(65, 450)
+scale = Vector2(0.1, 0.02)
+script = ExtResource("5_hd6xy")
+returnNode = NodePath("../RedArrow")
+
+[node name="Camera" type="Camera2D" parent="CameraPosition"]
+scale = Vector2(10, 50)
+limit_left = 0
+limit_top = 0
+limit_right = 2048
+limit_bottom = 600
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+
+[node name="TableStaticBody" type="StaticBody2D" parent="."]
+z_index = -2
+position = Vector2(1774, 497)
+scale = Vector2(0.244792, 0.244792)
+collision_layer = 2
+collision_mask = 0
+
+[node name="TableFinal" type="Sprite2D" parent="TableStaticBody"]
+texture = ExtResource("7_oh47h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TableStaticBody"]
+position = Vector2(20.4256, -106.213)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_chd5n")
+
+[node name="WinArea" type="Area2D" parent="TableStaticBody"]
+visible = false
+position = Vector2(-147.063, -175.659)
+scale = Vector2(4.0851, 4.0851)
+collision_layer = 0
+script = ExtResource("6_ricvc")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TableStaticBody/WinArea"]
+position = Vector2(36.25, -1.5)
+shape = SubResource("RectangleShape2D_h42qe")
+
+[node name="Sign" parent="." instance=ExtResource("9_x5hlm")]
+
+[node name="RichTextLabel2" parent="Sign" index="1"]
+theme_override_colors/font_color = Color(0, 0.65098, 0.301961, 1)
+theme_override_constants/outline_size = 15
+
+[node name="RichTextLabel3" parent="Sign" index="2"]
+theme_override_constants/outline_size = 15
+
+[node name="GUI" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Control" type="Control" parent="GUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 281.0
+offset_top = 235.0
+offset_right = 676.0
+offset_bottom = 407.0
+
+[node name="ColorRect" type="ColorRect" parent="GUI/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="GUI/Control/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_ko1w7")
+theme_override_font_sizes/font_size = 30
+text = "Dinner Is Served!!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="GUI/Control/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.65098, 0.301961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 30
+text = "Foods is shooted!!
+Bon Apetit!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="body_entered" from="TableStaticBody/WinArea" to="TableStaticBody/WinArea" method="_on_body_entered"]
+[connection signal="customer_served" from="TableStaticBody/WinArea" to="." method="_on_win_area_customer_served"]
+
+[editable path="Sign"]
