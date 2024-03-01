@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bheiflh24troi"
-path="res://.godot/imported/assets_2F-Ma3nEMksK8wbxFTWtE8_2F-Ma4Rppidh_x5A66vW_r_2F-Ma4UVB_nz8f5xIb7syJ_2Fexplosion-sprite.png-3d73047e31f7b7813b3b2caace056ad0.ctex"
+uid="uid://didupvkvdxk17"
+path="res://.godot/imported/dcvmnw6-d6e475b2-eaa7-4010-99e7-68b3be48ba04.png-ac174c31c4a06423a42e20bcc5b0f7df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://test_gravity/assets/assets_2F-Ma3nEMksK8wbxFTWtE8_2F-Ma4Rppidh_x5A66vW_r_2F-Ma4UVB_nz8f5xIb7syJ_2Fexplosion-sprite.png"
-dest_files=["res://.godot/imported/assets_2F-Ma3nEMksK8wbxFTWtE8_2F-Ma4Rppidh_x5A66vW_r_2F-Ma4UVB_nz8f5xIb7syJ_2Fexplosion-sprite.png-3d73047e31f7b7813b3b2caace056ad0.ctex"]
+source_file="res://Assets/Art/dcvmnw6-d6e475b2-eaa7-4010-99e7-68b3be48ba04.png"
+dest_files=["res://.godot/imported/dcvmnw6-d6e475b2-eaa7-4010-99e7-68b3be48ba04.png-ac174c31c4a06423a42e20bcc5b0f7df.ctex"]
 
 [params]
 

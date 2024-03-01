@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://didupvkvdxk17"
-path="res://.godot/imported/dcvmnw6-d6e475b2-eaa7-4010-99e7-68b3be48ba04.png-1a2193ebf0f98b4e5ad4b8864d06e4ad.ctex"
+uid="uid://dawnf621p3lai"
+path="res://.godot/imported/free-photo-of-ufo-parking-sign.jpg-b56ff9b9e8f5046ae9504ef7b49d1641.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://test_gravity/assets/dcvmnw6-d6e475b2-eaa7-4010-99e7-68b3be48ba04.png"
-dest_files=["res://.godot/imported/dcvmnw6-d6e475b2-eaa7-4010-99e7-68b3be48ba04.png-1a2193ebf0f98b4e5ad4b8864d06e4ad.ctex"]
+source_file="res://Assets/Art/free-photo-of-ufo-parking-sign.jpg"
+dest_files=["res://.godot/imported/free-photo-of-ufo-parking-sign.jpg-b56ff9b9e8f5046ae9504ef7b49d1641.ctex"]
 
 [params]
 

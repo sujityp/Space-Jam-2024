@@ -1,0 +1,256 @@
+[gd_scene load_steps=28 format=3 uid="uid://c6femh3art3g2"]
+
+[ext_resource type="Script" path="res://Scenes/test_gravity_minigame.gd" id="1_5lvij"]
+[ext_resource type="Texture2D" uid="uid://xb7muduyhde8" path="res://Assets/Art/back_2.png" id="1_fidot"]
+[ext_resource type="Script" path="res://Scenes/spaceship.gd" id="1_qcq8f"]
+[ext_resource type="Texture2D" uid="uid://bheiflh24troi" path="res://Assets/Art/assets_2F-Ma3nEMksK8wbxFTWtE8_2F-Ma4Rppidh_x5A66vW_r_2F-Ma4UVB_nz8f5xIb7syJ_2Fexplosion-sprite.png" id="5_fe47r"]
+[ext_resource type="Texture2D" uid="uid://26jn8w77qhf4" path="res://Assets/Art/spaceship.png" id="5_qxsd3"]
+[ext_resource type="Texture2D" uid="uid://dawnf621p3lai" path="res://Assets/Art/free-photo-of-ufo-parking-sign.jpg" id="5_ycl80"]
+[ext_resource type="Texture2D" uid="uid://d3own0av5am8w" path="res://Assets/Art/sign.png" id="7_adawu"]
+[ext_resource type="FontFile" uid="uid://b2cpl8itp7g4j" path="res://Assets/Fonts/the_orb_report/The-Orb-Report.ttf" id="8_of6ip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5adr1"]
+size = Vector2(155, 228)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rjt4v"]
+radius = 19.8353
+height = 87.776
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mt8lr"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d03ei"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1csqx"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmg3u"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3i7p"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b882t"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcs4k"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqvtf"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5qmh"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0xkm"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cspr0"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbydh"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlctn"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(1536, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnr1l"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(1664, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bl1mv"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(1792, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttu1x"]
+atlas = ExtResource("5_fe47r")
+region = Rect2(1920, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d8fu7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mt8lr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d03ei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1csqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmg3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3i7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b882t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcs4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqvtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5qmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0xkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cspr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbydh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlctn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnr1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bl1mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttu1x")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 30.0
+}]
+
+[node name="test_gravity_minigame" type="Node2D"]
+script = ExtResource("1_5lvij")
+asteroids_spawned = 5
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(0.501, 0.501)
+transform = Transform2D(0.501, 0, 0, 0.501, 0, 0)
+
+[node name="background" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2048, 0)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/background"]
+position = Vector2(0, -161.677)
+texture = ExtResource("1_fidot")
+centered = false
+
+[node name="Parking_lot" type="Area2D" parent="."]
+position = Vector2(3625, 562)
+scale = Vector2(3.68, 4.57747)
+collision_layer = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parking_lot"]
+scale = Vector2(0.101881, 0.101881)
+texture = ExtResource("5_ycl80")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parking_lot"]
+position = Vector2(2.5, -2.16964)
+scale = Vector2(1, 1.58036)
+shape = SubResource("RectangleShape2D_5adr1")
+
+[node name="spaceship" type="CharacterBody2D" parent="."]
+position = Vector2(213, 308)
+collision_mask = 0
+script = ExtResource("1_qcq8f")
+start_pos = Vector2(86, 305)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="spaceship"]
+position = Vector2(12, 0)
+rotation = 3.03687
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("5_qxsd3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spaceship"]
+position = Vector2(12, 7.7486e-07)
+rotation = 1.52193
+shape = SubResource("CapsuleShape2D_rjt4v")
+
+[node name="Camera2D" type="Camera2D" parent="spaceship"]
+offset = Vector2(300, 0)
+limit_top = 0
+limit_bottom = 600
+position_smoothing_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="spaceship"]
+sprite_frames = SubResource("SpriteFrames_d8fu7")
+animation = &"explode"
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(273, 72)
+scale = Vector2(0.514165, 0.621429)
+texture = ExtResource("7_adawu")
+flip_v = true
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="Label" parent="Sign"]
+offset_left = -289.79
+offset_top = 14.4827
+offset_right = 362.21
+offset_bottom = 110.483
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_of6ip")
+theme_override_font_sizes/font_size = 30
+text = "Park visitors' ekcles up ahead!"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RichTextLabel2" type="Label" parent="Sign"]
+offset_left = -293.68
+offset_top = -67.5862
+offset_right = 65.3199
+offset_bottom = 45.4138
+scale = Vector2(1.19786, 1.19786)
+theme_override_colors/font_color = Color(0, 0.65098, 0.301961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 28
+theme_override_font_sizes/font_size = 30
+text = "¿¿¿L/R arrows+Space???"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="parking" type="Sprite2D" parent="Sign"]
+position = Vector2(-380.963, 32.2726)
+scale = Vector2(0.0489601, 0.0489601)
+texture = ExtResource("5_ycl80")
+
+[node name="RichTextLabel3" type="Label" parent="Sign"]
+offset_left = 95.3001
+offset_top = -8.04596
+offset_right = 213.3
+offset_bottom = 104.954
+rotation = -0.438758
+scale = Vector2(1.19786, 1.19786)
+theme_override_colors/font_color = Color(0, 0.65098, 0.301961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 28
+theme_override_font_sizes/font_size = 30
+text = "ekcle"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="body_entered" from="Parking_lot" to="." method="_on_parking_lot_body_entered"]
+[connection signal="animation_finished" from="spaceship/AnimatedSprite2D" to="spaceship" method="_on_animated_sprite_2d_animation_finished"]

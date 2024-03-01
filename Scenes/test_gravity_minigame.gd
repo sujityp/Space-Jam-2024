@@ -4,7 +4,7 @@ extends Node2D
 signal minigame_won
 signal minigame_lost
 
-var asteroid_scene = preload("res://test_gravity/asteroid.tscn")
+var asteroid_scene = preload("res://Scenes/asteroid.tscn")
 @export var asteroids_spawned = 3
 
 

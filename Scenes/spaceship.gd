@@ -4,6 +4,7 @@ extends CharacterBody2D
 var direction = Vector2(1,0)
 @export var max_speed = 1000
 @export var thrust = 20
+@export var start_pos := Vector2()
 var current_speed = 0
 
 var space_held = false
@@ -12,7 +13,7 @@ var right_held = false
 
 
 func _ready():
-	position = Vector2(86,305)
+	position = start_pos
 	$AnimatedSprite2D.hide()
 
 
@@ -28,20 +29,12 @@ func _physics_process(delta):
 		velocity += thrust*direction
 		if velocity.length() > max_speed:
 			velocity = velocity.normalized()*max_speed
-
-	#if velocity.x >= 0:
-		#$Camera2D.offset.x = move_toward($Camera2D.offset.x, 300, 10)
-		#print($Camera2D.offset.x)
-	#else :
-		#$Camera2D.offset.x = move_toward($Camera2D.offset.x, -300, -10)
-		#print($Camera2D.offset.x)
-
 	move_and_slide()
 	
-	if position.y > 800:
-		position.y = -60
-	elif position.y < -60:
-		position.y = 800
+	if position.y > 759:
+		position.y = -41
+	elif position.y < -41:
+		position.y = 759
 
 
 
@@ -63,7 +56,7 @@ func _input(event):
 
 
 func _on_animated_sprite_2d_animation_finished():
-	position = Vector2(86,305)
+	position = start_pos
 	rotation_degrees = 0
 	thrust = 20
 	$AnimatedSprite2D.hide()
