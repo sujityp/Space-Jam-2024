@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bs3iwmp1i4ywj"]
+
+[ext_resource type="PackedScene" uid="uid://b523lsqtbaqqv" path="res://Scenes/moon_tilemap.tscn" id="1_8nfir"]
+[ext_resource type="Script" path="res://Scenes/moon_world.gd" id="1_ykikp"]
+[ext_resource type="PackedScene" uid="uid://ddf4537576310" path="res://Scenes/interior_tilemap.tscn" id="2_vxfrs"]
+[ext_resource type="PackedScene" uid="uid://daj4frsyx28pl" path="res://Scenes/actionable.tscn" id="3_dn6a1"]
+[ext_resource type="PackedScene" uid="uid://clfvb485pochm" path="res://Scenes/player.tscn" id="3_siv1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydl7k"]
+size = Vector2(90, 20)
+
+[node name="MoonWorld" type="Node2D"]
+script = ExtResource("1_ykikp")
+
+[node name="MoonTilemap" parent="." instance=ExtResource("1_8nfir")]
+
+[node name="Sprite2D" parent="MoonTilemap" index="0"]
+position = Vector2(512, 300)
+
+[node name="CraterTileMap" parent="MoonTilemap" index="1"]
+layer_0/tile_data = PackedInt32Array(393221, 393216, 5, 458757, 393216, 7, 458758, 524288, 7, 393222, 524288, 5, 720902, 655360, 5, 786438, 393216, 7, 786439, 524288, 7, 720903, 524288, 5, 720901, 393216, 7, 655365, 393216, 5, 655366, 524288, 5, 655380, 393216, 5, 655381, 524288, 5, 720917, 524288, 7, 720916, 393216, 7, 131086, 393216, 5, 196622, 393216, 7, 196623, 524288, 7, 131087, 524288, 5, 917517, 393216, 5, 983053, 393216, 7, 983054, 524288, 7, 917518, 524288, 5)
+
+[node name="Actionable" parent="." instance=ExtResource("3_dn6a1")]
+position = Vector2(630, 206)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" parent="Actionable" index="0"]
+position = Vector2(35, 0)
+shape = SubResource("RectangleShape2D_ydl7k")
+
+[node name="InteriorTilemap" parent="." instance=ExtResource("2_vxfrs")]
+position = Vector2(0, -1)
+scale = Vector2(2, 2)
+layer_0/tile_data = PackedInt32Array(262163, 393219, 12, 262166, 589827, 12, 262167, 655363, 12, 262168, 720899, 12, 327704, 720899, 13, 327703, 655363, 13, 327702, 589827, 13, 262165, 524291, 12, 262164, 458755, 12, 327699, 393219, 13, 327700, 458755, 13, 393236, 458755, 14, 393235, 393219, 14, 393237, 524291, 14, 393238, 589827, 14, 393239, 655363, 14, 393240, 720899, 14, 458776, 720899, 15, 458777, 786435, 15, 393241, 786435, 14, 327705, 786435, 13, 262169, 786435, 12, 327701, 524291, 13)
+
+[node name="Player" parent="." instance=ExtResource("3_siv1n")]
+position = Vector2(594, 299)
+
+[editable path="MoonTilemap"]
+[editable path="Actionable"]
