@@ -4,6 +4,12 @@
 [ext_resource type="Resource" uid="uid://dygy5dodesqs4" path="res://Dialogue/testdialogue.dialogue" id="2_pebve"]
 
 [node name="Actionable" type="Area2D"]
+collision_layer = 8
 script = ExtResource("1_4nf3h")
 dialogue_resource = ExtResource("2_pebve")
 dialogue_start = "this_is_a_node_title"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

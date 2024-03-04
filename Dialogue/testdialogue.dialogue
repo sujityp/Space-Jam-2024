@@ -7,7 +7,9 @@ Nathan: Here are some choices.
 - Second one
 	Nathan: You picked the second one.
 - Start again => this_is_a_node_title
-- End the conversation => END
+- End the conversation => end_conversation
 Nathan: For more information see the online documentation.
 
+~ end_conversation
+set State.player_speaking = false
 => END
