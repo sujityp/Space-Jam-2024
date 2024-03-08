@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://h5u035jhgdc7"
+path="res://.godot/imported/jim_dwight_table.dialogue-04f1e982d55a290487bbdd182993e208.tres"
+
+[deps]
+
+source_file="res://Dialogue/jim_dwight_table.dialogue"
+dest_files=["res://.godot/imported/jim_dwight_table.dialogue-04f1e982d55a290487bbdd182993e208.tres"]
+
+[params]
+
+defaults=true

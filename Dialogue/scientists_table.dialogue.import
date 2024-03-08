@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://u4s75lj8t5m6"
+path="res://.godot/imported/scientists_table.dialogue-c3a41543403a0a81dc61822f49e82205.tres"
+
+[deps]
+
+source_file="res://Dialogue/scientists_table.dialogue"
+dest_files=["res://.godot/imported/scientists_table.dialogue-c3a41543403a0a81dc61822f49e82205.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b0eivq8ucsyvx"
+path="res://.godot/imported/jrpg_table.dialogue-67af631b665c97c0f903c27697f0defb.tres"
+
+[deps]
+
+source_file="res://Dialogue/jrpg_table.dialogue"
+dest_files=["res://.godot/imported/jrpg_table.dialogue-67af631b665c97c0f903c27697f0defb.tres"]
+
+[params]
+
+defaults=true

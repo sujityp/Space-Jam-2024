@@ -5,11 +5,12 @@
 
 [node name="Actionable" type="Area2D"]
 collision_layer = 8
+collision_mask = 16
 script = ExtResource("1_4nf3h")
 dialogue_resource = ExtResource("2_pebve")
 dialogue_start = "this_is_a_node_title"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

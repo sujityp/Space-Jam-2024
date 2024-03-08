@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dc3urmu6ve8x1"
+path="res://.godot/imported/president_table.dialogue-055d36b63a8f8f0bc54a3d2a95f2bcba.tres"
+
+[deps]
+
+source_file="res://Dialogue/president_table.dialogue"
+dest_files=["res://.godot/imported/president_table.dialogue-055d36b63a8f8f0bc54a3d2a95f2bcba.tres"]
+
+[params]
+
+defaults=true

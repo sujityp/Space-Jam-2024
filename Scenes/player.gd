@@ -16,7 +16,7 @@ func _physics_process(delta):
 	var direction = Vector2(Input.get_axis("ui_left", "ui_right"),Input.get_axis("ui_up", "ui_down"))
 	if direction.x and direction.y: direction.y = 0
 	
-	if direction:
+	if direction and not State.player_speaking:
 		AnimTree.set("parameters/Idle/blend_position", direction)
 		AnimTree.set("parameters/Run/blend_position", direction)
 		AnimState.travel("Run")
