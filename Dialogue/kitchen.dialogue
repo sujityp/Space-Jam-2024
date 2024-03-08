@@ -1,6 +1,6 @@
-~ empty_table
+~ no_food_ready
 
-Narrator: There's no one sitting on this table.
+Narrator: Nothing to do here.
 => end_conversation
 
 ~ end_conversation

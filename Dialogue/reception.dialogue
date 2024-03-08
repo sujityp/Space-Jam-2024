@@ -1,6 +1,7 @@
-~ empty_table
+~ no_reception
 
-Narrator: There's no one sitting on this table.
+Narrator: No new arrivals.
+Narrator: YET.
 => end_conversation
 
 ~ end_conversation

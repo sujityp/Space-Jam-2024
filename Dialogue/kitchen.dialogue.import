@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b1rpel74x2oor"
+path="res://.godot/imported/kitchen.dialogue-f29af57513fb1262735f80a000d74572.tres"
+
+[deps]
+
+source_file="res://Dialogue/kitchen.dialogue"
+dest_files=["res://.godot/imported/kitchen.dialogue-f29af57513fb1262735f80a000d74572.tres"]
+
+[params]
+
+defaults=true
