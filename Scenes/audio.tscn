@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3ashql4b24p1"]
+
+[ext_resource type="Script" path="res://Scenes/audio.gd" id="1_sipfl"]
+[ext_resource type="AudioStream" uid="uid://4bwo37wslvur" path="res://Assets/sound/725727__universfield__nebula-soundscape.mp3" id="1_ywqgc"]
+[ext_resource type="AudioStream" uid="uid://8ur7dex3p0qo" path="res://Assets/sound/727744__gregorquendel__albeniz-pavana-capricho-op.mp3" id="2_6e3fh"]
+
+[node name="audio" type="Node2D"]
+script = ExtResource("1_sipfl")
+
+[node name="space" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ywqgc")
+volume_db = -7.0
+autoplay = true
+
+[node name="classical" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_6e3fh")
+volume_db = -8.0
+autoplay = true
+
+[connection signal="finished" from="space" to="." method="_on_space_finished"]
+[connection signal="finished" from="classical" to="." method="_on_classical_finished"]
