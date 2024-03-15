@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cslguj0xbwj8j"]
+
+[ext_resource type="Script" path="res://Scenes/intro.gd" id="1_j68ec"]
+[ext_resource type="AudioStream" uid="uid://bjebdlaohj4ya" path="res://Assets/sound/727407__voiceoverneil__welcome-voice-over-audio.mp3" id="2_sf006"]
+[ext_resource type="AudioStream" uid="uid://2v1m7imb5oo5" path="res://Assets/sound/104832__chelan__inception-1.wav" id="3_g40ib"]
+[ext_resource type="AudioStream" uid="uid://60fvk55ng5f4" path="res://Assets/sound/425663__camo1018__clapping.mp3" id="4_oqchf"]
+
+[node name="intro" type="Node2D"]
+script = ExtResource("1_j68ec")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+offset_left = 56.0
+offset_top = 106.0
+offset_right = 956.0
+offset_bottom = 406.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "ff"
+autowrap_mode = 1
+
+[node name="welcome" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_sf006")
+autoplay = true
+
+[node name="inception" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g40ib")
+
+[node name="clapping" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_oqchf")
+
+[connection signal="finished" from="welcome" to="." method="_on_welcome_finished"]
+[connection signal="finished" from="inception" to="." method="_on_inception_finished"]
+[connection signal="finished" from="clapping" to="." method="_on_clapping_finished"]
