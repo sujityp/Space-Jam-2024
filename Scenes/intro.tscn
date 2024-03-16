@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://cslguj0xbwj8j"]
+
+[ext_resource type="Script" path="res://Scenes/intro.gd" id="1_j68ec"]
+[ext_resource type="Texture2D" uid="uid://b5rn6smqiout2" path="res://Assets/Art/space sky.jpg" id="2_gvhmq"]
+[ext_resource type="AudioStream" uid="uid://bjebdlaohj4ya" path="res://Assets/sound/727407__voiceoverneil__welcome-voice-over-audio.mp3" id="2_sf006"]
+[ext_resource type="AudioStream" uid="uid://2v1m7imb5oo5" path="res://Assets/sound/104832__chelan__inception-1.wav" id="3_g40ib"]
+[ext_resource type="AudioStream" uid="uid://60fvk55ng5f4" path="res://Assets/sound/425663__camo1018__clapping.mp3" id="4_oqchf"]
+[ext_resource type="Texture2D" uid="uid://bd1a83gi8g2p5" path="res://Assets/Art/title screen.jpg" id="5_k1b6y"]
+[ext_resource type="Texture2D" uid="uid://63sgdn84d0n6" path="res://Assets/Art/title_name.png" id="6_tc62q"]
+
+[node name="intro" type="Node2D"]
+script = ExtResource("1_j68ec")
+
+[node name="void" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(514.041, 342)
+scale = Vector2(0.635185, 0.635185)
+texture = ExtResource("2_gvhmq")
+
+[node name="welcome" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_sf006")
+autoplay = true
+
+[node name="inception" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g40ib")
+
+[node name="clapping" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_oqchf")
+
+[node name="title_screen" type="Sprite2D" parent="."]
+position = Vector2(512, 302)
+texture = ExtResource("5_k1b6y")
+
+[node name="space" type="Label" parent="title_screen"]
+offset_left = 141.0
+offset_top = -19.0
+offset_right = 279.0
+offset_bottom = 4.0
+text = "Space to continue"
+
+[node name="title_name" type="Sprite2D" parent="."]
+position = Vector2(512, 302)
+texture = ExtResource("6_tc62q")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+offset_left = 241.0
+offset_top = 85.0
+offset_right = 791.0
+offset_bottom = 205.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "His invention led to the foundation of SynthScape Labs back in the Lateral Ages. It is currently valued at 81 flumptillion $hmeckels. There seem to be no signs of slowing down either, as the last fiscal quarter was the company’s most successful one yet."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="HSplitContainer/Label"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="finished" from="welcome" to="." method="_on_welcome_finished"]
+[connection signal="finished" from="inception" to="." method="_on_inception_finished"]
+[connection signal="finished" from="clapping" to="." method="_on_clapping_finished"]
