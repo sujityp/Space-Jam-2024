@@ -1,9 +1,23 @@
 extends Node2D
 
-var text_1 = "The unanimous Declaration of the thirteen united States of America, When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation."
-var text_2 = "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.--That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed, --That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to effect their Safety and Happiness. Prudence, indeed, will dictate that Governments long established should not be changed for light and transient causes; and accordingly all experience hath shewn, that mankind are more disposed to suffer, while evils are sufferable, than to right themselves by abolishing the forms to which they are accustomed. But when a long train of abuses and usurpations, pursuing invariably the same Object evinces a design to reduce them under absolute Despotism, it is their right, it is their duty, to throw off such Government, and to provide new Guards for their future security.--Such has been the patient sufferance of these Colonies; and such is now the necessity which constrains them to alter their former Systems of Government. The history of the present King of Great Britain is a history of repeated injuries and usurpations, all having in direct object the establishment of an absolute Tyranny over these States. To prove this, let Facts be submitted to a candid world."
-var text_3 = "He has refused his Assent to Laws, the most wholesome and necessary for the public good."
-var text_4 = "He has forbidden his Governors to pass Laws of immediate and pressing importance, unless suspended in their operation till his Assent should be obtained; and when so suspended, he has utterly neglected to attend to them."
+
+var text_1 = "Människor."
+var text_2 = "The charge of the stars."
+var text_3 = "The herb from the heavens."
+var text_4 = "It powers the entire galaxy from Gooklor to ekcles, to even toilet rocks."
+var text_5 = "And it’s all thanks to Huskydory Cosmo, who invented it while struggling to make ends meet, juggling three dead-end jobs as an underwater ethicist."
+var text_6 = "His invention led to the foundation of SynthScape Labs back in the Lateral Ages. It is currently valued at 81 flumptillion $hmeckels. There seem to be no signs of slowing down either, as the last fiscal quarter was the company’s most successful one yet."
+var text_7 = "To celebrate this occasion, President Cosmo and Vice-President MC have planned an elaborate end-of-the-jolecade party to celebrate all the hard work their employees have put in."
+var text_8 = "The party features an all-you-can-stuff buffet, a classical-space orchestra, and the highly anticipated fireworks show at the end of the sol. The entire party takes place on their local exo-Moon, overlooking Project Earth."
+var text_9 = "You are playing as MC (contrary to popular belief, MC does not stand for ‘Main Character’, but instead for ‘Mister Coaquimtadgh’)."
+var text_10 = "You are playing as the VP (contrary to popular belief, VP does not stand for ‘Vondrizzle Plorptastic’, but instead for  ‘Vice President’)."
+var text_11 = "You have spent the last 20 Blimptimes planning this event. Do NOT let it go to waste."
+var text_12 = "All you have to do is ensure your employees are having a good time this sol."
+var text_13 = "Good luck!"
+
+
+
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,6 +44,24 @@ func _input(event):
 		elif $HSplitContainer/Label.text == text_3:
 			$HSplitContainer/Label.text = text_4
 		elif $HSplitContainer/Label.text == text_4:
+			$HSplitContainer/Label.text = text_5
+		elif $HSplitContainer/Label.text == text_5:
+			$HSplitContainer/Label.text = text_6
+		elif $HSplitContainer/Label.text == text_6:
+			$HSplitContainer/Label.text = text_7
+		elif $HSplitContainer/Label.text == text_7:
+			$HSplitContainer/Label.text = text_8
+		elif $HSplitContainer/Label.text == text_8:
+			$HSplitContainer/Label.text = text_9
+		elif $HSplitContainer/Label.text == text_9:
+			$HSplitContainer/Label.text = text_10
+		elif $HSplitContainer/Label.text == text_10:
+			$HSplitContainer/Label.text = text_11
+		elif $HSplitContainer/Label.text == text_11:
+			$HSplitContainer/Label.text = text_12
+		elif $HSplitContainer/Label.text == text_12:
+			$HSplitContainer/Label.text = text_13
+		elif $HSplitContainer/Label.text == text_13:
 			$inception._set_playing(false)
 			$clapping._set_playing(true)
 

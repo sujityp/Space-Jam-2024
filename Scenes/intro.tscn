@@ -44,19 +44,30 @@ position = Vector2(512, 302)
 texture = ExtResource("6_tc62q")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
-offset_left = 265.0
-offset_top = 42.0
-offset_right = 765.0
-offset_bottom = 221.0
+offset_left = 241.0
+offset_top = 85.0
+offset_right = 791.0
+offset_bottom = 205.0
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "hidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihidejjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+text = "His invention led to the foundation of SynthScape Labs back in the Lateral Ages. It is currently valued at 81 flumptillion $hmeckels. There seem to be no signs of slowing down either, as the last fiscal quarter was the company’s most successful one yet."
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="HSplitContainer/Label"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="finished" from="welcome" to="." method="_on_welcome_finished"]
 [connection signal="finished" from="inception" to="." method="_on_inception_finished"]
