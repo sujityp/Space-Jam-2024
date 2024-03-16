@@ -1,9 +1,156 @@
-~ no_reception
+~ clock0
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_jim.png"
+Baboonox: Hey, MC!
+MC: 
+- It's a pleasure to see you guys!
+- Hello yourself!
 
-Narrator: No new arrivals.
-Narrator: YET.
+Yoffabeard: This is a very pliquing place you’ve put up here!
+MC: 
+- Of course it is! Prez and I had to reward \neveryone for their hard work this year.
+- Thank you! Prez and I pulled about twenty \n sleepless sols to make this happen.
+
+Yoffabeard: Well, uh, I’m sure the rest of the place is just as pliquing, and it was nice talking to you, but I have to bounce.
+MC: 
+- Whoa! You haven't even had a chance to see \nthe fireworks!
+- You came here just to say bye?!?
+
+Baboonox: You’re not leaving here, Yoffabeard. Not until you finish your business with Racoonie.
+Yoffabeard: Fine!
+MC: 
+- Racoonie? What about her?
+- Unfinished business?
+Baboonox: Haven’t you heard? Racoonie’s leaving the company. She’s going on to join the Space Marines.
+MC:
+- Space Marines?
+- Why am I always the last to hear \nabout things?
+Baboonox: If you want more info, ask Racoonie herself. She’ll be coming here later, and this might be Yoffabeard’s last—
+Yoffabeard: Okay, that’s enough. Why don’t we continue this conversation inside?
+MC:
+- Please have a seat inside and allow \nme to park your ekcles.
+- Why don’t you follow me inside? And \nplease leave your ekcle keys with me.
+Baboonox: We’ll seat ourselves, thanks. Here are the keys to my ekcle.
+set State.clock = State.clock + 1
+=> end_conversation
+
+
+~ clock1
+=> empty_table
+
+~ clock2
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_jrpg.png"
+Johnbeatle: ‘Sup, xritweed.
+MC: 
+- Hey now, let’s not resort to calling names.
+- Sigh* Hey guys, it’s good to see you again.
+Ringomite: Can it, aeroofile.
+MC: 
+- That’s no way to speak to your superior.
+- Keep up your attitude, and I’ll throw you\nout faster than you can say ballerlotomber.
+Pauleweevil: Calm down. We’re only joking, right, guys? Just a little jest.
+Georgebug: Besides, we’ve already handed in our resignation letters.
+MC: 
+- Seriously?!? When?
+- Normally, I would have said I will miss you, but…
+Ringomite: We resigned yestersol, so you’ll only deal with us for another korpdecade.
+MC: 
+- May I ask why you guys quit?
+- Do I want to know why you guys quit?
+Johnbeatle: We’re tired of being treated like debris by uptight ailmenets like you from Upper Management.
+Pauleweevil: Yeah! We’d much rather become the greatest houshia singers in the galaxy than work another desk job.
+Georgebug: We’ve already sold all our possessions and will move to the Holliwould star system by the end of the preveek.
+MC: 
+- Well, good luck with that.\nHow about we continue this conversation inside?
+- OK then, why don’t you guys seat yourselves,\nand I’ll park your ekcle for you.
+Johnbeatle: Knock yourself out with my ekcle keys.
+=> end_conversation
+
+~ clock3
+=> empty_table
+
+~ clock4
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_sci.png"
+Musclemouse: Yo, what’s up MC?
+Heisenbird: Well, well, if it isn’t MC!
+Puhseudosloth: MC! May I offer you my most sincere sol-tidings on this fine sol?
+MC: 
+- Greetings, Heisenbird, Musclemouse, Quixslothe. It's always a pleasure to see you guys.
+- Hey, if it isn’t my favourite three scientists.
+Musclemouse: Quixslothe, man, you don’t have to speak like that. We are here to party.
+Quixslothe: Are you perchance unacquainted with the utterance “Manners maketh maudaters”? But, of course, queeze!
+Musclemouse: Xk***ch you, dude. What are you trying to say?
+Heisenbird: Zip it, both of you. We aren’t here to party. Save your quantum flux for later.
+MC: 
+- Are you not here for the fireworks? You know I put a lot of effort into that!
+- I thought the entire point of attending a party is to, uh…, party?
+Heisenbird: Hah, are you serious? You don’t know?
+Quixslothe: Verily, I doth envy theirn ignorance! How simple it must be to leadeth such style!
+Musclemouse: The President will be retiring soon.
+MC: 
+- The President? Retiring? Ha ha. I don’t know anything about that. Why do you think that?
+- Yeah, totally. I've heard a thing or two. Uh, I mean, I don't have any insider info or anything like that.
+Quixslothe: It is, but inevitable, forsooth. Plugging some numbers and drudging the quantum quadratics reveals it all. Doth.
+Heisenbird: We crunched the numbers, and there’s an 80% chance he retires within this jolecade and a 95% chance he does it within two.
+Musclemouse: We’re here to duke it out, neutrino style, to decide who gets to be the next prez!
+MC:
+- Sure, but let's get you guys seated first.
+- I’m going to need to park your ekcle first!
+Quixslothe: Hark! Here be my ekcle keys. Let us then take our seats forthwith.
+set State.clock = State.clock + 1
+=> end_conversation
+
+
+~ clock5
+=> empty_table
+
+~ clock6
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_pam.png"
+Fish: Hey, MC!
+Armabillbo: MC, hi! Good to see you here.
+MC: 
+- It’s fantastic to see you, Misfish, Racoonie, Armabillbo!
+- Of course I’m here, considering I’m running the place.
+Armabillbo: I must say, the place looks fawnoculous.
+Racoonie: I know, right? I forgot just how gorgeous our planet looks from its pseudo-moon.
+Misfish: I cannot even fathom how much work you must have put into planning all this.
+MC: 
+- More sleepless sols than you can count.
+- Well, the President and I had been planning this night for quite a while.
+Racoonie: Oh, by the way, is the President in yet? I really need to thank him again.
+MC: 
+- No, he isn’t in yet. I’ll let him know you want to speak with him.
+- What’s the occasion? Maybe I can carry your message?
+Armabillbo: Oh em gee!!! MC doesn’t know!!!
+MC: 
+- Know what?
+- Huh?
+Racoonie: I just got accepted into—
+Armabillbo: PAM JUST GOT ACCEPTED INTO THE SPACE MARINES!!!
+Misfish: Uh, Armabillbo, maybe allow Racoonie to break the news?
+Armabillbo: Sorry, I got too excited!
+Racoonie: Yeah, and it was all thanks to the excellent recommendation letter Prez gave me!
+MC: 
+- That’s fantastic news! I heard Yoffabeard and Baboonox talking about it.
+- Congratulations! Yoffabeard and Baboonox did mention something about it.
+Racoonie: I told them first, you know, along with Armabillbo, Misfish, and my parents.
+MC: 
+- Well, congratulations again. Let’s get you guys seated.
+- Come on, we can celebrate inside. Let me have your ekcle keys.
+Misfish: Now, where did I put my ekcle keys? I just had them.
+Armabillbo: Oooh, I’ve got them. Kept them nice and toasty for ya.
+Misfish: Uhh… thank you?!?
+=> end_conversation
+
+~ clock7
+=> empty_table
+
+
+~ empty_table
+set State.location = ""
+Narrator: There's no one sitting on this table.
 => end_conversation
 
 ~ end_conversation
+set State.location = ""
 set State.player_speaking = false
 => END

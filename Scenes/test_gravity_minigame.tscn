@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://b2cpl8itp7g4j" path="res://Assets/Fonts/the_orb_report/The-Orb-Report.ttf" id="8_of6ip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5adr1"]
-size = Vector2(155, 228)
+size = Vector2(155, 656.912)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rjt4v"]
 radius = 19.8353

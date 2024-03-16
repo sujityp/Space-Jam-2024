@@ -1,12 +1,15 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 400.0
 const FRIC = 0.4
 
 @onready var AnimTree = $AnimationTree
 @onready var AnimPlayer = $AnimationPlayer
 @onready var AnimState = AnimTree.get("parameters/playback")
+
+func _ready():
+	global_position = State.player_position
 
 
 func _physics_process(delta):

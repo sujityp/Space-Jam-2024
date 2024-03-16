@@ -1,7 +1,29 @@
-~ empty_table
+~ clock0
+~ clock1
+=> empty_table
 
+~ clock2
+~ clock3
+~ clock4
+~ clock5
+~ clock6
+~ clock7
+~ clock8
+=> no_order_yet
+
+
+~ no_order_yet
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_jrpg.png"
+Baboonox: Hey MC!
+Yoffabeard: We haven't decided our orders yet, so just give us some time.
+Baboonox: Anyway, Yoffabeard, have you considered what I've just said? About Racoonie?
+=> end_conversation
+
+
+~ empty_table
 Narrator: There's no one sitting on this table.
 => end_conversation
+
 
 ~ end_conversation
 set State.player_speaking = false

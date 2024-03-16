@@ -12,6 +12,27 @@ const SKIP_ACTION = &"ui_cancel"
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 @onready var potrait = $%Portrait
+@onready var potraitSprite = $%PortraitSprite
+
+var potraitSpriteFrameDict = {
+	"mr. president": 0,
+	"mrs. president": 1,
+	"pam": 2,
+	"pamfriend1": 3,
+	"pamfriend2": 4,
+	"kid1": 5,
+	"kid2": 6,
+	"kid3": 7,
+	"yoffabeard": 8,
+	"baboonox": 9,
+	"johnbeatle": 10,
+	"ringomite": 11,
+	"pauleweevil": 12,
+	"georgebug": 13,
+	"quixslothe": 14,
+	"heisenbird": 15,
+	"musclemouse": 16
+}
 
 ## The dialogue resource
 var resource: DialogueResource
@@ -45,6 +66,14 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
+		
+		if dialogue_line.character.to_lower() in potraitSpriteFrameDict.keys():
+			potraitSprite.show()
+			potrait.show()
+			potraitSprite.frame = potraitSpriteFrameDict[dialogue_line.character.to_lower()]
+		else:
+			potraitSprite.hide()
+			potrait.hide()
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line

@@ -1,5 +1,21 @@
-~ empty_table
 
+~ clock0
+=> empty_table
+~ clock1
+=> empty_table
+~ clock2
+=> empty_table
+~ clock3
+=> empty_table
+~ clock4
+=> empty_table
+~ clock5
+=> empty_table
+~ clock6
+=> empty_table
+
+
+~ empty_table
 Narrator: There's no one sitting on this table.
 => end_conversation
 

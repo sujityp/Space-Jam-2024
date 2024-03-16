@@ -1,7 +1,36 @@
-~ empty_table
+~ clock0
+=> empty_table
 
+~ clock1
+Baboonox: Hey MC!
+Yoffabeard: Have you parked the eckle yet? It should be around here somewhere.
+Baboonox: It's red and white and has a giant poster of Racoon—
+Yoffabeard: IT'S ON YOUR LEFT. ITS ON YOUR LEFT. That's what Baboonox was trying to say.
+=> end_conversation
+
+~ clock2
+~ clock3
+~ clock4
+~ clock5
+~ clock6
+~ clock7
+=> no_order_yet
+
+~ clock8
+=> no_order_yet
+
+
+~ no_order_yet
+Baboonox: Hey MC!
+Yoffabeard: We haven't decided our orders yet, so just give us some time.
+Baboonox: Anyway, Yoffabeard, have you considered what I've just said? About Racoonie?
+=> end_conversation
+
+
+~ empty_table
 Narrator: There's no one sitting on this table.
 => end_conversation
+
 
 ~ end_conversation
 set State.player_speaking = false

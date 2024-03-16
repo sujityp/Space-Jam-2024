@@ -8,9 +8,16 @@ collision_layer = 8
 collision_mask = 16
 script = ExtResource("1_4nf3h")
 dialogue_resource = ExtResource("2_pebve")
-dialogue_start = "this_is_a_node_title"
+background_resource = "res://Assets/Art/pam_moon.png"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+scale = Vector2(2, 2)
+centered = false
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

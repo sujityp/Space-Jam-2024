@@ -3,6 +3,7 @@
 Narrator: Nothing to do here.
 => end_conversation
 
+
 ~ end_conversation
 set State.player_speaking = false
 => END
