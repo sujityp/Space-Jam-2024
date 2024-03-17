@@ -1,6 +1,8 @@
 extends Node2D
 
 
+var MainGame = preload("res://Scenes/world.tscn")
+
 var text_1 = "Människor."
 var text_2 = "The charge of the stars."
 var text_3 = "The herb from the heavens."
@@ -63,7 +65,8 @@ func _input(event):
 			$HSplitContainer/Label.text = text_13
 		elif $HSplitContainer/Label.text == text_13:
 			$inception._set_playing(false)
-			$clapping._set_playing(true)
+			if not $clapping.playing:
+				$clapping._set_playing(true)
 
 
 func _on_welcome_finished():
@@ -77,4 +80,6 @@ func _on_inception_finished():
 
 
 func _on_clapping_finished():
+	var worldInstance = MainGame.instantiate()
+	get_tree().root.add_child(worldInstance)
 	queue_free()
