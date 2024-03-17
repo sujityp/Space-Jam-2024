@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bs3iwmp1i4ywj"]
+[gd_scene load_steps=4 format=3 uid="uid://bs3iwmp1i4ywj"]
 
 [ext_resource type="Script" path="res://Scenes/world.gd" id="1_xwcl5"]
 [ext_resource type="PackedScene" uid="uid://bfcj0h6tqntqp" path="res://Scenes/moon_world.tscn" id="2_q2co1"]
+[ext_resource type="PackedScene" uid="uid://b3ashql4b24p1" path="res://Scenes/audio.tscn" id="3_y7uqk"]
 
 [node name="World" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_xwcl5")
 
 [node name="MoonWorld" parent="." instance=ExtResource("2_q2co1")]
+
+[node name="audio" parent="." instance=ExtResource("3_y7uqk")]
