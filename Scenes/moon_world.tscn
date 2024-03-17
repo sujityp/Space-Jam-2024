@@ -132,7 +132,6 @@ shape = SubResource("RectangleShape2D_u2qlc")
 [node name="ActKitchen" parent="Actionables" instance=ExtResource("3_d4v64")]
 position = Vector2(1088, -36)
 dialogue_resource = ExtResource("11_xawuq")
-dialogue_start = "no_food_ready"
 
 [node name="CollisionShape2D" parent="Actionables/ActKitchen" index="0"]
 position = Vector2(-2, 30)

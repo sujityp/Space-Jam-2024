@@ -1,5 +1,29 @@
-~ no_food_ready
+~ clock0
+=> no_food_ready
+~ clock1
+=> no_food_ready
+~ clock2
+=> no_food_ready
+~ clock3
+=> no_food_ready
+~ clock4
+=> no_food_ready
+~ clock5
+=> no_food_ready
+~ clock6
+=> no_food_ready
+~ clock7
+=> no_food_ready
+~ clock8
+=> no_food_ready
+~ clock9
+=> no_food_ready
+~ clock10
+=> no_food_ready
+~ clock11
+=> no_food_ready
 
+~ no_food_ready
 Narrator: Nothing to do here.
 => end_conversation
 

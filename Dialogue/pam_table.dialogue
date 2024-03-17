@@ -1,8 +1,48 @@
-~ empty_table
+~ clock0
+=> empty_table
+~ clock1
+=> empty_table
+~ clock2
+=> empty_table
+~ clock3
+=> empty_table
+~ clock4
+=> empty_table
+~ clock5
+=> empty_table
+~ clock6
+=> empty_table
 
+
+~ clock7
+set State.location = "res://Assets/Art/LocationBackgrounds/table_pam.png"
+Misfish: Hey, MC!
+Armabillbo: If you wanna know where the eckle is, its out up front, to your left.
+Racoonie: You can't miss it - its red and white.
+=> end_conversation
+
+
+~ clock8
+=> no_order_yet
+~ clock9
+=> no_order_yet
+~ clock10
+=> no_order_yet
+~ clock11
+=> no_order_yet
+
+
+~ no_order_yet
+set State.location = "res://Assets/Art/LocationBackgrounds/table_pam.png"
+Racoonie: MC! We haven't ordered yet so maybe come back later?
+=> end_conversation
+
+~ empty_table
+set State.location = ""
 Narrator: There's no one sitting on this table.
 => end_conversation
 
 ~ end_conversation
+set State.location = ""
 set State.player_speaking = false
 => END

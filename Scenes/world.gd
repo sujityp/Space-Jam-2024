@@ -15,7 +15,6 @@ var MoonWorld = preload("res://Scenes/moon_world.tscn")
 
 func _ready():
 	State.clock_updated.connect(on_State_clock_updated)
-	State.minigame_exited.connect(on_State_minigame_exited)
 	State.stuff_todo = true
 	on_State_clock_updated()
 
@@ -45,20 +44,106 @@ func on_State_clock_updated():
 				ScientistsTable.hide()
 				ParkingArea.monitoring = false
 			1:
-				JimTable.show()
 				Spaceship.show()
+				PrezTable.hide()
+				PamTable.hide()
+				JimTable.show()
+				KidsTable.hide()
+				JRPGTable.hide()
+				ScientistsTable.hide()
 				ParkingArea.monitoring = true
 			
 			2:
-				JimTable.show()
 				Spaceship.hide()
+				PrezTable.hide()
+				PamTable.hide()
+				JimTable.show()
+				KidsTable.hide()
+				JRPGTable.hide()
+				ScientistsTable.hide()
 				ParkingArea.monitoring = false
 			
 			3:
-				JimTable.show()
 				Spaceship.show()
+				PrezTable.hide()
+				PamTable.hide()
+				JimTable.show()
+				KidsTable.hide()
 				JRPGTable.show()
+				ScientistsTable.hide()
 				ParkingArea.monitoring = true
+			4:
+				Spaceship.hide()
+				PrezTable.hide()
+				PamTable.hide()
+				JimTable.show()
+				KidsTable.hide()
+				JRPGTable.show()
+				ScientistsTable.hide()
+				ParkingArea.monitoring = false
+			5:
+				Spaceship.show()
+				PrezTable.hide()
+				PamTable.hide()
+				JimTable.show()
+				KidsTable.hide()
+				JRPGTable.show()
+				ScientistsTable.show()
+				ParkingArea.monitoring = true
+			6:
+				Spaceship.hide()
+				PrezTable.hide()
+				PamTable.hide()
+				JimTable.show()
+				KidsTable.hide()
+				JRPGTable.show()
+				ScientistsTable.show()
+				ParkingArea.monitoring = false
+			7:
+				Spaceship.show()
+				PrezTable.hide()
+				PamTable.show()
+				JimTable.show()
+				KidsTable.hide()
+				JRPGTable.show()
+				ScientistsTable.show()
+				ParkingArea.monitoring = true
+			8:
+				Spaceship.hide()
+				PrezTable.hide()
+				PamTable.show()
+				JimTable.show()
+				KidsTable.hide()
+				JRPGTable.show()
+				ScientistsTable.show()
+				ParkingArea.monitoring = false
+			9:
+				Spaceship.show()
+				PrezTable.show()
+				PamTable.show()
+				JimTable.show()
+				KidsTable.hide()
+				JRPGTable.show()
+				ScientistsTable.show()
+				ParkingArea.monitoring = true
+			10:
+				Spaceship.hide()
+				PrezTable.show()
+				PamTable.show()
+				JimTable.show()
+				KidsTable.hide()
+				JRPGTable.show()
+				ScientistsTable.show()
+				ParkingArea.monitoring = false
+			11:
+				Spaceship.hide()
+				PrezTable.show()
+				PamTable.show()
+				JimTable.show()
+				KidsTable.show()
+				JRPGTable.show()
+				ScientistsTable.show()
+				ParkingArea.monitoring = false
 
 
 func on_minigame_won():
@@ -68,15 +153,3 @@ func on_minigame_won():
 	get_tree().root.get_node("test_gravity_minigame").queue_free()
 	State.in_minigame = false
 	State.clock += 1
-
-
-func on_State_minigame_exited():
-	return
-	Spaceship = $MoonWorld/Spaceship
-	PrezTable = $MoonWorld/SittingSprites/PrezTable
-	PamTable = $MoonWorld/SittingSprites/PamTable
-	JimTable = $MoonWorld/SittingSprites/JimTable
-	KidsTable = $MoonWorld/SittingSprites/KidsTable
-	JRPGTable = $MoonWorld/SittingSprites/JRPGTable
-	ScientistsTable = $MoonWorld/SittingSprites/ScientistTable
-	ParkingArea = $MoonWorld/ParkingArea

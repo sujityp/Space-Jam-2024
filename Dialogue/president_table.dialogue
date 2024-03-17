@@ -1,9 +1,48 @@
-~ empty_table
+~ clock0
+=> empty_table
+~ clock1
+=> empty_table
+~ clock2
+=> empty_table
+~ clock3
+=> empty_table
+~ clock4
+=> empty_table
+~ clock5
+=> empty_table
+~ clock6
+=> empty_table
+~ clock7
+=> empty_table
+~ clock8
+=> empty_table
 
+~ clock9
+set State.location = "res://Assets/Art/LocationBackgrounds/table_pres.png"
+Mr. President: MC! Hohoho, so you finally have your report drafted up eh?
+Mr. President: Oh, you don't have it yet.
+Mrs. President: Huskydory! Give poor MC some time to do his job, for Clod’s sweet mammalade.
+Mr. President: Sorry Honey. Uh, the eckle is to your left.
+=> end_conversation
+
+~ clock10
+=> no_order_yet
+~ clock11
+=> no_order_yet
+
+
+~ no_order_yet
+set State.location = "res://Assets/Art/LocationBackgrounds/table_pres.png"
+Mrs. President: We haven't decided what to order yet, sweetie. Everything here looks magnificent!
+Mr. President: Give us some more time, please.
+=> end_conversation
+
+~ empty_table
+set State.location = ""
 Narrator: There's no one sitting on this table.
 => end_conversation
 
-
 ~ end_conversation
+set State.location = ""
 set State.player_speaking = false
 => END

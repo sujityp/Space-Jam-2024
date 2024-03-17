@@ -2,6 +2,7 @@
 => empty_table
 
 ~ clock1
+set State.location = "res://Assets/Art/LocationBackgrounds/table_jim.png"
 Baboonox: Hey MC!
 Yoffabeard: Have you parked the eckle yet? It should be around here somewhere.
 Baboonox: It's red and white and has a giant poster of Racoon—
@@ -9,18 +10,29 @@ Yoffabeard: IT'S ON YOUR LEFT. ITS ON YOUR LEFT. That's what Baboonox was trying
 => end_conversation
 
 ~ clock2
+=> no_order_yet
 ~ clock3
+=> no_order_yet
 ~ clock4
+=> no_order_yet
 ~ clock5
+=> no_order_yet
 ~ clock6
+=> no_order_yet
 ~ clock7
 => no_order_yet
-
 ~ clock8
+=> no_order_yet
+~ clock9
+=> no_order_yet
+~ clock10
+=> no_order_yet
+~ clock11
 => no_order_yet
 
 
 ~ no_order_yet
+set State.location = "res://Assets/Art/LocationBackgrounds/table_jim.png"
 Baboonox: Hey MC!
 Yoffabeard: We haven't decided our orders yet, so just give us some time.
 Baboonox: Anyway, Yoffabeard, have you considered what I've just said? About Racoonie?
@@ -28,10 +40,11 @@ Baboonox: Anyway, Yoffabeard, have you considered what I've just said? About Rac
 
 
 ~ empty_table
+set State.location = ""
 Narrator: There's no one sitting on this table.
 => end_conversation
 
-
 ~ end_conversation
+set State.location = ""
 set State.player_speaking = false
 => END
