@@ -3,19 +3,26 @@ extends Node2D
 
 var MainGame = preload("res://Scenes/world.tscn")
 
-var text_1 = "Människor."
-var text_2 = "The charge of the stars."
-var text_3 = "The herb from the heavens."
-var text_4 = "It powers the entire galaxy from Gooklor to ekcles, to even toilet rocks."
-var text_5 = "And it’s all thanks to Huskydory Cosmo, who invented it while struggling to make ends meet, juggling three dead-end jobs as an underwater ethicist."
-var text_6 = "His invention led to the foundation of SynthScape Labs back in the Lateral Ages. It is currently valued at 81 flumptillion $hmeckels. There seem to be no signs of slowing down either, as the last fiscal quarter was the company’s most successful one yet."
-var text_7 = "To celebrate this occasion, President Cosmo and Vice-President MC have planned an elaborate end-of-the-jolecade party to celebrate all the hard work their employees have put in."
-var text_8 = "The party features an all-you-can-stuff buffet, a classical-space orchestra, and the highly anticipated fireworks show at the end of the sol. The entire party takes place on their local exo-Moon, overlooking Project Earth."
-var text_9 = "You are playing as MC (contrary to popular belief, MC does not stand for ‘Main Character’, but instead for ‘Mister Coaquimtadgh’)."
-var text_10 = "You are playing as the VP (contrary to popular belief, VP does not stand for ‘Vondrizzle Plorptastic’, but instead for  ‘Vice President’)."
-var text_11 = "You have spent the last 20 Blimptimes planning this event. Do NOT let it go to waste."
-var text_12 = "All you have to do is ensure your employees are having a good time this sol."
-var text_13 = "Good luck!"
+var text_num = -1
+var welcome_finished = false
+var text_arr = [
+	"Människor.",
+	"The charge of the stars.",
+	"The herb from the heavens.",
+	"It powers the entire galaxy from Gooklor to ekcles, to even toilet rocks.",
+	"And it’s all thanks to Huskydory Cosmo, who invented it while struggling to make ends meet, juggling three dead-end jobs as an underwater ethicist.",
+	"His invention led to the foundation of SynthScape Labs back in the Lateral Ages. It is currently valued at 81 flumptillion $hmeckels. There seem to be no signs of slowing down either, as the last fiscal quarter was the company’s most successful one yet.",
+	"To celebrate this occasion, President Cosmo and Vice-President MC have planned an elaborate end-of-the-jolecade party to celebrate all the hard work their employees have put in.",
+	"The party features an all-you-can-stuff buffet, a classical-space orchestra, and the highly anticipated FIREWORKS show at the end of the sol. The entire party takes place on their local exo-Moon, overlooking Project Earth.",
+	"You are playing as MC, the current VP of SynthScape.",
+	"Contrary to popular belief, MC does not stand for ‘Main Character’, but instead for ‘Mister Coaquimtadgh’.",
+	"Contrary to popular belief, VP does not stand for ‘Vondrizzle Plorptastic’, but instead means  ‘Vice President’.",
+	"You have spent the last 20 Blimptimes planning this event. Do NOT let it go to waste.",
+	"All you have to do is ensure your employees are having a good time this sol.",
+	"Good luck!"
+]
+
+
 
 
 
@@ -34,39 +41,15 @@ func _ready():
 	#pass
 
 func _input(event):
-	if Input.is_action_just_pressed('ui_accept'):
-		if $HSplitContainer/Label.text == '':
+	if Input.is_action_just_pressed('ui_accept') and welcome_finished:
 			$title_name.hide()
-			$HSplitContainer/Label.text = text_1
-			$HSplitContainer.show()
-		elif $HSplitContainer/Label.text == text_1:
-			$HSplitContainer/Label.text = text_2
-		elif $HSplitContainer/Label.text == text_2:
-			$HSplitContainer/Label.text = text_3
-		elif $HSplitContainer/Label.text == text_3:
-			$HSplitContainer/Label.text = text_4
-		elif $HSplitContainer/Label.text == text_4:
-			$HSplitContainer/Label.text = text_5
-		elif $HSplitContainer/Label.text == text_5:
-			$HSplitContainer/Label.text = text_6
-		elif $HSplitContainer/Label.text == text_6:
-			$HSplitContainer/Label.text = text_7
-		elif $HSplitContainer/Label.text == text_7:
-			$HSplitContainer/Label.text = text_8
-		elif $HSplitContainer/Label.text == text_8:
-			$HSplitContainer/Label.text = text_9
-		elif $HSplitContainer/Label.text == text_9:
-			$HSplitContainer/Label.text = text_10
-		elif $HSplitContainer/Label.text == text_10:
-			$HSplitContainer/Label.text = text_11
-		elif $HSplitContainer/Label.text == text_11:
-			$HSplitContainer/Label.text = text_12
-		elif $HSplitContainer/Label.text == text_12:
-			$HSplitContainer/Label.text = text_13
-		elif $HSplitContainer/Label.text == text_13:
-			$inception._set_playing(false)
-			if not $clapping.playing:
+			text_num += 1
+			if text_num == len(text_arr) - 1:
+				$inception._set_playing(false)
 				$clapping._set_playing(true)
+			if not text_num >= len(text_arr):
+				$HSplitContainer/Label.text = text_arr[text_num]
+				$HSplitContainer.show() 
 
 
 func _on_welcome_finished():
@@ -74,6 +57,7 @@ func _on_welcome_finished():
 	$title_name.show()
 	$title_screen.show()
 	$HSplitContainer/Label.text = ''
+	welcome_finished = true
 
 func _on_inception_finished():
 	$inception._set_playing(true)
