@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b8j10phmu4xi1"
+path="res://.godot/imported/kids_table.dialogue-7e3276265852938f1cc3bcce3b680f1e.tres"
+
+[deps]
+
+source_file="res://Dialogue/kids_table.dialogue"
+dest_files=["res://.godot/imported/kids_table.dialogue-7e3276265852938f1cc3bcce3b680f1e.tres"]
+
+[params]
+
+defaults=true

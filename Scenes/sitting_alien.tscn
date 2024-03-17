@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn63aej3olqls"]
+
+[ext_resource type="Texture2D" uid="uid://hvo45rs120ao" path="res://Assets/Art/table_small_aliens_spritesheet.png" id="1_yt6eg"]
+
+[node name="SittingAlien" type="Sprite2D"]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_yt6eg")
+hframes = 17
+region_enabled = true
+region_rect = Rect2(0, 0, 204, 28)

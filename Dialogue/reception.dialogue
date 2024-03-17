@@ -1,0 +1,229 @@
+~ clock0
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_jim.png"
+Baboonox: Hey, MC!
+MC: 
+- It's a pleasure to see you!
+- Hello yourself!
+Yoffabear: This is a very pliquing place you’ve put up here!
+MC: 
+- Of course, it is! Prez and I had \n to reward everyone for their hard work this year.
+- Thank you! Prez and I pulled about \n twenty sleepless sols to make this happen.
+Yoffabear: Well, uh, I’m sure the rest of the place is just as pliquing, and it was nice talking to you, but I have to bounce.
+MC: 
+- Whoa! You haven't even had a \nchance to see the fireworks!
+- You came here just to say bye?!?
+Baboonox: You’re not leaving here, Yoffabear. Not until you finish your business with Racoonie.
+Yoffabear: Fine!
+MC: 
+- Racoonie? What about her?
+- Unfinished business?
+Baboonox: Haven’t you heard? Racoonie’s leaving the company. She’s going on to join the Space Marines.
+MC: 
+- Space Marines?
+- Why am I always last to hear about things?
+Baboonox: If you want more info, ask Racoonie herself. She’ll be coming here later, and this might be Yoffabear’s last—
+Yoffabear: Okay, that’s enough. Why don’t we continue this conversation inside?
+MC: 
+- Please have a seat inside and \nallow me to park your ekcles.
+- Why don’t you follow me inside? \nAnd please leave your ekcle keys with me.
+Baboonox: We’ll seat ourselves, thanks. Here are the keys to my ekcle.
+set State.clock = State.clock + 1
+=> end_conversation
+
+~ clock2
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_jrpg.png"
+Johnbeatle: ‘Sup, xritweed.
+MC: 
+- Hey, let’s not resort to namecalling.
+- *Sigh* Hey guys, it’s good to see you.
+Ringomite: Can it, aeroofile.
+MC: 
+- That’s no way to speak to superiors.
+- Keep up your attitude, and I’ll throw you \n out faster than you can say ballerlotomber.
+Pauleweevil: Calm down. We’re only joking, right, guys? Just a little jest.
+Georgebug: Besides, we’ve already handed in our resignation letters.
+MC: 
+- Seriously?!? When?
+- I don't think I will miss you.
+Ringomite: We resigned yestersol, so you’ll only deal with us for another korpdecade.
+MC: 
+- May I ask why you guys quit?
+- Do I want to know why you guys quit?
+Johnbeatle: We’re tired of being treated like debris by uptight ailmenets like you from Upper Management.
+Pauleweevil: Yeah! We’d much rather become the greatest houshia singers in the galaxy than work another desk job.
+Georgebug: We’ve already sold all our possessions and will move to the Holliwould star system by the end of the preveek.
+MC: 
+- Well, good luck with that. Let's talk inside?
+- OK then, why don’t I park your ekcle for you.
+Johnbeatle: Knock yourself out.
+set State.clock = State.clock + 1
+=> end_conversation
+
+~ clock4
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_sci.png"
+Musclemouse: Yo, what’s up MC?
+Heisenbird: Well, well, if it isn’t MC!
+Quixslothe: MC! May I offer you my most sincere sol-tidings on this fine sol?
+MC: 
+- Greetings, Heisenbird, Musclemouse, Quixslothe.
+- Hey, if it isn’t my three favorite scientists.
+Musclemouse: Quixslothe, man, you don’t have to speak like that. We are here to party.
+Quixslothe: Musclemouse, are you perchance unacquainted with the utterance “Manners maketh maudaters”? But, of course, queeze!
+Musclemouse: Xk***ch you, dude. What are you trying to say?
+Heisenbird: Zip it, both of you. We aren’t here to party. Save your quantum flux for later.
+MC: 
+- Are you not here for the fireworks?\nYou know I put a lot of effort into that!
+- I thought the entire point of attending\n a party is to, uh…, party?
+Heisenbird: Hah, are you serious? You don’t know?
+Quixslothe: Verily, I doth envy theirn ignorance! How simple it must be to leadeth such style!
+Musclemouse: The President will be retiring soon.
+MC: 
+- The President? Retiring? Ha ha. I don’t \nknow anything about that. Why do you think that?
+- Yeah, totally. I've heard a thing or two. Uh, \nI mean, I don't have any insider info or anything like that.
+Quixslothe: It is, but inevitable, forsooth. Plugging some numbers and drudging the quantum quadratics reveals it all. Doth.
+Heisenbird: We crunched the numbers, and there’s an 80% chance he retires within this jolecade and a 95% chance he does it within two.
+Musclemouse: We’re here to duke it out, neutrino style, to decide who gets to be the next Prez!
+MC: 
+- Sure, but let's get you guys seated first.
+- I’m going to need to park your ekcle first!
+Quixslothe: Hark! Here be my ekcle keys. Let us then take our seats forthwith.
+set State.clock = State.clock + 1
+=> end_conversation
+
+~ clock6
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_pam.png"
+Misfish: Hey, MC!
+Armabillbo: MC, hi! Good to see you here.
+MC: 
+- It’s fantastic to see you, \nMisfish, Racoonie, Armabillbo!
+- Of course I’m here, considering I set it up.
+Armabillbo: I must say, the place looks fawnoculous.
+Racoonie: I know, right? I forgot just how gorgeous OUR planet looks from its pseudo-moon.
+Misfish: I cannot even fathom how much work you must have put into planning all this.
+MC: 
+- More sleepless sols than you can count.
+- Well, the President and I had been\n planning this night for quite a while.
+Racoonie: Oh, by the way, is the President in yet? I really need to thank him again.
+MC: 
+- No, he isn’t in yet. I’ll \nlet him know you want to speak with him.
+- What’s the occasion? \nMaybe I can carry your message?
+Armabillbo: Oh em gee!!! MC doesn’t know!!!
+MC: 
+- Know what?
+- Huh?
+Racoonie: I just got accepted into—
+Armabillbo: PAM JUST GOT ACCEPTED INTO THE SPACE MARINES!!!
+Misfish: Uh, Armabillbo, maybe allow Racoonie to break the news?
+Armabillbo: Sorry, I got too excited!
+Racoonie: Yeah, and it was all thanks to the excellent recommendation letter Prez gave me!
+MC: 
+- That’s fantastic news! I heard \n Yoffabear talking about it.
+- Congrats! Yoffabear and Baboonox \ndid mention something...
+Racoonie: I told them first, you know, along with Armabillbo, Misfish, and my parents.
+MC: 
+- Well, congratulations! \nLet’s get you guys seated.
+- We can celebrate inside. \nLet me have your ekcle keys.
+Misfish: Now, where did I put my ekcle keys? I just had them.
+Armabillbo: Oooh, I’ve got them. Kept them nice and toasty for ya.
+Misfish: Uhh… thank you?!?
+set State.clock = State.clock + 1
+=> end_conversation
+
+~ clock8
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_pres.png"
+Mr. President: MC! Long time no see!
+MC: 
+- Good to see you, Prez!
+- How are you the last one to \nshow up to your own party?
+Mrs. President: Well, we would’ve made it if someone didn’t miss the warp gate on the way here.
+Mr. President: You know how the I-85 Hyperpass is during relancy-hour. It’s next to impossible to get out of that sector. 
+Mr. President: And our kid’s babysitter bailed on us at the last moment. We had to rush to find one on such short notice.
+Mrs. President: Fortunately for us, one of our neighbours was willing to keep an eye on them. If we’re lucky, there won’t be any issues, and I won’t be hearing from them tonight.
+MC: 
+- That’s great to hear.
+- You could have brought them with you.
+Mrs. President: We would have brought them with us, but they have been grounded into the indefinite future.
+Mr. President: Our boys were caught trying to replace all of their school’s irewsoap with grenade bog.
+MC: 
+- That would have been bad.
+- Wow. Just wow.
+Mr. President: Yeah, thankfully, the head warden caught them fighting over who was going to be “the top mogger dogger”, whatever that means.
+Mrs. President: But enough about them. Are we really the last ones to show up?
+MC: 
+- Yeah, everyone’s waiting for you inside.
+- Even John, Paul, Ringo, and George showed up earlier.
+Mr. President: Shoot. Oh, well. By the way, any updates on the special assignment?
+MC: 
+- Yeah, some preliminary analysis.
+- I’ve got a fair bit done.
+Mr. President: Amazing. Can’t wait.
+MC: 
+- Please leave your ekcle keys, and have a seat.
+- Why don’t I take care of your ekcle for you?
+Mrs. President: Here you go! And thanks again for doing all this.
+set State.clock = State.clock + 1
+=> end_conversation
+
+~ clock10
+set State.location = "res://Assets/Art/LocationBackgrounds/moon_kids.png"
+Maximadog: *whispering* Shut up, shut up - we’re here. Remember your backstories, fellas.
+Catamatrix: Hello, my fine sir.  Good day to thee.  Or rather, I should sayeth good evening, for the gaze-clock in mine own coat seemeth to suggest it is a fifth past ril o’clock.
+Maximadog: *whispering* What the hell are you doing?
+Catamatrix: *whispering* Uh, I’m pretending to be an adult, duh.
+Maximadog: *whispering* They don’t sound like that.
+Nevilemur: *whispering* Guys, I think this was a bad idea. It’s not too late to turn back and—
+Maximadog: *whispering* All of you just shut up and let me do the talking.
+Maximadog: Sorry about that slight delay; we were having a bit of an induced fsychkosis. But we’re all okay, isn’t that right, guys?
+Nevilemur: Uh-huh.
+Catamatrix: Yeah, no issues here.
+Maximadog: Anyway, we’re part of the Office Party Appraisal Committee. I’m Maximadog Cosmo, and these are my associates. On my right is Catamatrix Cosmo, my right-hand man.
+Catamatrix: Hello, my fine sir.  Good day to thee.  Or rather, I should sayeth good evening—
+Maximadog: And on my left is my left-hand man, Nevilemur Longlegs.
+Nevilemur: H-hello, N-Nevilemur. I mean, I am Nevilemur.
+MC: (Are these Prez’s kids? They must’ve snuck out somehow and got here.)
+- Party Appraisal Committee? Never heard of it.
+- And why are you guys here?
+Maximadog: The Board sent us. You know, the guys up top - black suits and the whole shebang. We’re here to make sure this party is up to standards.
+MC: (I’m pretty sure no such “Board” exists.)
+- And did you say your last name was Cosmo?
+- Any relation to our President, Huskydory Cosmo?
+Catamatrix: *whispers* Maximadog, you bluffoon, we were supposed to use fake names. You’ve ruined all our plans!
+Nevilemur: *whispers* It’s still not too late to run away. I’m too young to go to space juvie!
+Maximadog: *whispers* Don’t worry, I can still salvage this.
+Maximadog: Ha-ha, Cosmo is actually a very common name. Yeah, I was surprised when I found out, too. It's a funny story. Yeah, common name, that.
+Catamatrix: Maximadog and myself behold liketh brethren; nonetheless, we art unrelated.
+Maximadog: You know what mate? We’ve been standing out for a while. You don’t want a negative appraisal on wait times, do you?
+MC: (I should probably keep a closer eye on them.)
+- May I have your eckle keys, please?
+Catamatrix: Oh, uh, we took the spacebus here. 
+MC: I thought there’s no public space transit available to this sector of the galaxy.
+Maximadog: Oh, he means we rideshared with someone. Yeah, yeah, that’s what we did. We’ll have our seats now.
+set State.clock = State.clock + 1
+=> end_conversation
+
+~ clock1
+=> empty_table
+~ clock3
+=> empty_table
+~ clock5
+=> empty_table
+~ clock7
+=> empty_table
+~ clock9
+=> empty_table
+~ clock11
+=> empty_table
+~ clock13
+=> empty_table
+
+
+
+~ empty_table
+set State.location = ""
+Narrator: No one else has arrived yet.
+=> end_conversation
+
+~ end_conversation
+set State.location = ""
+set State.player_speaking = false
+=> END

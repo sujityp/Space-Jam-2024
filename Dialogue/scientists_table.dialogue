@@ -1,0 +1,47 @@
+~ clock0
+=> empty_table
+~ clock1
+=> empty_table
+~ clock2
+=> empty_table
+~ clock3
+=> empty_table
+~ clock4
+=> empty_table
+
+
+~ clock5
+set State.location = "res://Assets/Art/LocationBackgrounds/table_sci.png"
+Musclemouse: Yo, what’s up MC?
+Heisenbird: The eckle is white and red and on your left!
+Quixslothe: May I offer you my most sincere sol-tidings on your upcoming journey?
+=> end_conversation
+
+~ clock6
+=> no_order_yet
+~ clock7
+=> no_order_yet
+~ clock8
+=> no_order_yet
+~ clock9
+=> no_order_yet
+~ clock10
+=> no_order_yet
+~ clock11
+=> no_order_yet
+
+~ no_order_yet
+set State.location = "res://Assets/Art/LocationBackgrounds/table_sci.png"
+Musclemouse: Yo, what’s up MC? We haven't decided yet.
+Quixslothe: Perchance it may suit you to bring yerself back here after many a fluppaminute.
+=> end_conversation
+
+~ empty_table
+set State.location = ""
+Narrator: There's no one sitting on this table.
+=> end_conversation
+
+~ end_conversation
+set State.location = ""
+set State.player_speaking = false
+=> END

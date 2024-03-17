@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bmk5tdukgcq71"
+path="res://.godot/imported/pam_table.dialogue-1388ea7d431b241a2766765159336f3d.tres"
+
+[deps]
+
+source_file="res://Dialogue/pam_table.dialogue"
+dest_files=["res://.godot/imported/pam_table.dialogue-1388ea7d431b241a2766765159336f3d.tres"]
+
+[params]
+
+defaults=true

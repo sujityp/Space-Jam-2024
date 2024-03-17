@@ -1,0 +1,50 @@
+~ clock0
+=> empty_table
+~ clock1
+=> empty_table
+~ clock2
+=> empty_table
+
+~ clock3
+set State.location = "res://Assets/Art/LocationBackgrounds/table_jrpg.png"
+Johnbeatle: ‘Sup, xritweed.
+Ringomite: You haven't even parked the eckle yet? What have you been doing?
+Pauleweevil: Big red and white spaceship. 
+Georgebug: It should be on your left. 
+=> end_conversation
+
+
+~ clock4
+=> no_order_yet
+~ clock5
+=> no_order_yet
+~ clock6
+=> no_order_yet
+~ clock7
+=> no_order_yet
+~ clock8
+=> no_order_yet
+~ clock9
+=> no_order_yet
+~ clock10
+=> no_order_yet
+~ clock11
+=> no_order_yet
+
+
+~ no_order_yet
+set State.location = "res://Assets/Art/LocationBackgrounds/table_jrpg.png"
+Johnbeatle: ‘Sup, xritweed.
+Ringomite: Come back later. We haven't picked our orders yet. 
+=> end_conversation
+
+
+~ empty_table
+set State.location = ""
+Narrator: There's no one sitting on this table.
+=> end_conversation
+
+~ end_conversation
+set State.location = ""
+set State.player_speaking = false
+=> END
