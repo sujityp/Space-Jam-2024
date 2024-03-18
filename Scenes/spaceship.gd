@@ -17,7 +17,7 @@ func _ready():
 	$AnimatedSprite2D.hide()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if right_held && !left_held:
 		rotation_degrees += 5
 	elif left_held && !right_held:
@@ -38,7 +38,7 @@ func _physics_process(delta):
 
 
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("ui_left"):
 		left_held = true
 	elif  Input.is_action_just_released("ui_left"):

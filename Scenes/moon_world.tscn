@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bfcj0h6tqntqp"]
+[gd_scene load_steps=32 format=3 uid="uid://bfcj0h6tqntqp"]
 
 [ext_resource type="PackedScene" uid="uid://b523lsqtbaqqv" path="res://Scenes/moon_tilemap.tscn" id="1_vi3ty"]
 [ext_resource type="PackedScene" uid="uid://ddf4537576310" path="res://Scenes/interior_tilemap.tscn" id="2_von8e"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bn63aej3olqls" path="res://Scenes/sitting_alien.tscn" id="13_r1lgw"]
 [ext_resource type="Texture2D" uid="uid://pxncnbyes63j" path="res://Assets/Art/7547889.png" id="14_7bt1s"]
 [ext_resource type="Script" path="res://Scenes/ParkingArea.gd" id="15_jmjq5"]
+[ext_resource type="Script" path="res://Scenes/ObjectiveLabel.gd" id="17_f37bc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tio4o"]
 size = Vector2(128, 21)
@@ -156,6 +157,7 @@ position = Vector2(-19, 7.5)
 shape = SubResource("RectangleShape2D_pxxwh")
 
 [node name="StaticBodies" type="Node2D" parent="."]
+visible = false
 position = Vector2(7.24011, -73)
 
 [node name="TableLT" type="StaticBody2D" parent="StaticBodies"]
@@ -419,6 +421,23 @@ script = ExtResource("15_jmjq5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParkingArea"]
 position = Vector2(-59, 44)
 shape = SubResource("RectangleShape2D_ky7iu")
+
+[node name="Objective" type="CanvasLayer" parent="."]
+
+[node name="ObjectiveLabel" type="Label" parent="Objective"]
+offset_left = 689.0
+offset_top = 1.0
+offset_right = 1024.0
+offset_bottom = 140.0
+size_flags_horizontal = 6
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+text = "Phone is Ringing.
+Go Pick it up."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("17_f37bc")
 
 [connection signal="area_entered" from="ParkingArea" to="ParkingArea" method="_on_area_entered"]
 [connection signal="area_exited" from="ParkingArea" to="ParkingArea" method="_on_area_exited"]

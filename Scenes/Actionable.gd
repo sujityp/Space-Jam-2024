@@ -14,12 +14,13 @@ func _ready():
 	Background.hide()
 
 
-func _process(delta):
+func _process(_delta):
 	if player_inside and Input.is_action_just_pressed("ui_accept") and not State.player_speaking:
 		action()
 	if State.player_speaking:
-		Background.set_texture(load(State.location))
-		Background.show()
+		if State.location:
+			Background.set_texture(load(State.location))
+			Background.show()
 	else: Background.hide()
 
 
@@ -31,9 +32,9 @@ func action():
 	DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_start + str(State.clock))
 
 
-func _on_area_entered(area):
+func _on_area_entered(_area):
 	player_inside = true
 
 
-func _on_area_exited(area):
+func _on_area_exited(_area):
 	player_inside = false

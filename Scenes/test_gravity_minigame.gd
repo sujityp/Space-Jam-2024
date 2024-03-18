@@ -16,7 +16,7 @@ func _ready():
 		asteroid_scene_instance.body_entered.connect(_on_asteroid_body_entered)
 
 
-func _on_asteroid_body_entered(body):
+func _on_asteroid_body_entered(_body):
 	if not $spaceship/AnimatedSprite2D.is_playing():
 		$spaceship/Sprite2D.hide()
 		$spaceship/AnimatedSprite2D.show()

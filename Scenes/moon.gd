@@ -22,11 +22,11 @@ func _physics_process(delta):
 
 
 
-func _on_radius_body_exited(body):
+func _on_radius_body_exited(_body):
 	direction *= -1
 	z_index *= -1
 
 
-func _on_midline_body_exited(body):
+func _on_midline_body_exited(_body):
 	scale_direction *= -1
 	print(scale)

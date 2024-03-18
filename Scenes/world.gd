@@ -21,21 +21,21 @@ func _ready():
 	State.clock = 200
 
 
-func _process(delta):
+func _process(_delta):
 	on_State_clock_updated()
 	
 
 
 func on_State_clock_updated():
 	if not State.in_minigame:
-		var Spaceship = $MoonWorld/Spaceship
-		var PrezTable = $MoonWorld/SittingSprites/PrezTable
-		var PamTable = $MoonWorld/SittingSprites/PamTable
-		var JimTable = $MoonWorld/SittingSprites/JimTable
-		var KidsTable = $MoonWorld/SittingSprites/KidsTable
-		var JRPGTable = $MoonWorld/SittingSprites/JRPGTable
-		var ScientistsTable = $MoonWorld/SittingSprites/ScientistTable
-		var ParkingArea = $MoonWorld/ParkingArea
+		Spaceship = $MoonWorld/Spaceship
+		PrezTable = $MoonWorld/SittingSprites/PrezTable
+		PamTable = $MoonWorld/SittingSprites/PamTable
+		JimTable = $MoonWorld/SittingSprites/JimTable
+		KidsTable = $MoonWorld/SittingSprites/KidsTable
+		JRPGTable = $MoonWorld/SittingSprites/JRPGTable
+		ScientistsTable = $MoonWorld/SittingSprites/ScientistTable
+		ParkingArea = $MoonWorld/ParkingArea
 		match State.clock:
 			0: 
 				Spaceship.hide()

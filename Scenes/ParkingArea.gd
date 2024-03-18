@@ -8,7 +8,7 @@ var player_inside = false
 signal minigame_started
 
 
-func _process(delta):
+func _process(_delta):
 	if player_inside and Input.is_action_just_pressed("ui_accept") and not State.in_minigame:
 		action()
 
@@ -23,9 +23,9 @@ func action():
 	get_parent().queue_free()
 
 
-func _on_area_entered(area):
+func _on_area_entered(_area):
 	player_inside = true
 
 
-func _on_area_exited(area):
+func _on_area_exited(_area):
 	player_inside = false

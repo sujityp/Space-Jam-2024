@@ -40,7 +40,7 @@ func _ready():
 #func _process(delta):
 	#pass
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed('ui_accept') and welcome_finished:
 			$title_name.hide()
 			text_num += 1
