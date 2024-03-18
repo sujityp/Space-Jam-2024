@@ -2,6 +2,7 @@ extends Node2D
 
 
 var MoonWorld = preload("res://Scenes/moon_world.tscn")
+var endingSequence = preload("res://Scenes/ending.tscn")
 
 @onready var Spaceship = $MoonWorld/Spaceship
 @onready var PrezTable = $MoonWorld/SittingSprites/PrezTable
@@ -11,16 +12,18 @@ var MoonWorld = preload("res://Scenes/moon_world.tscn")
 @onready var JRPGTable = $MoonWorld/SittingSprites/JRPGTable
 @onready var ScientistsTable = $MoonWorld/SittingSprites/ScientistTable
 @onready var ParkingArea = $MoonWorld/ParkingArea
+@onready var phoneAct = $MoonWorld/Actionables/ActPhone
 
 
 func _ready():
 	State.clock_updated.connect(on_State_clock_updated)
 	State.stuff_todo = true
-	on_State_clock_updated()
+	State.clock = 200
 
 
 func _process(delta):
 	on_State_clock_updated()
+	
 
 
 func on_State_clock_updated():
@@ -34,7 +37,7 @@ func on_State_clock_updated():
 		var ScientistsTable = $MoonWorld/SittingSprites/ScientistTable
 		var ParkingArea = $MoonWorld/ParkingArea
 		match State.clock:
-			0:
+			0: 
 				Spaceship.hide()
 				PrezTable.hide()
 				PamTable.hide()
@@ -144,6 +147,9 @@ func on_State_clock_updated():
 				JRPGTable.show()
 				ScientistsTable.show()
 				ParkingArea.monitoring = false
+				var endingInstance = endingSequence.instantiate()
+				get_tree().root.add_child(endingInstance)
+				queue_free()
 
 
 func on_minigame_won():

@@ -4,6 +4,8 @@
 => empty_table
 ~ clock2
 => empty_table
+~ clock200
+=> empty_table
 
 ~ clock3
 set State.location = "res://Assets/Art/LocationBackgrounds/table_jrpg.png"

@@ -9,12 +9,10 @@ script = ExtResource("1_sipfl")
 
 [node name="space" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_ywqgc")
-volume_db = -7.0
 autoplay = true
 
 [node name="classical" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_6e3fh")
-volume_db = -8.0
 autoplay = true
 
 [connection signal="finished" from="space" to="." method="_on_space_finished"]

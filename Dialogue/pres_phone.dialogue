@@ -1,0 +1,74 @@
+~ clock200
+set State.location = ""
+Mr. President: 'Allo?
+MC: 
+- Vice-Prez speaking.
+- Yello, it's me.
+Mr. President: Ah, MC, I was hoping to speak to you today.
+MC: 
+- Have I done something wrong, sir?
+- Are you unsatisfied with today’s planning? ‘Cause I can always—
+Mr. President: What? No, this has nothing to do with anything of that sort.
+MC: 
+- Oh, thank the Clod’s sweet mammalade.
+- What do you want to speak about?
+Mr. President: Just shut up for a minute, will you? See, I’ve been doing a lot of thinking lately. I’ve worked with this company for daeons…
+Mr. President: I’ve been through recessions and depressions, I’ve hired employees and seen them Poké-volve, I’ve watched our competitors burn themselves to the ground…
+MC: 
+- …
+Mr. President: I’ve experienced a lot of things not a lot of people will experience, and I’m satisfied with all I've done. So, I have decided it’s time for me to retire and let someone younger take on my mantle.
+MC: 
+- What?!? Are you sure about this?
+- How long have you been planning this?
+Mr. President: Me and Donbeagle have been mulling over since Project Earth started, so we’re pretty sure.
+MC: 
+- Have you decided on who’s going to be your replacement?
+- Have you told anyone else?
+Mr. President: See, I wanted to talk to you about that. I haven’t told another soul because I want to know who’s worthy. And I want you to judge them.
+MC: 
+- Judge them?
+- And how am I supposed to do that?
+Mr. President: Just take mental notes on everyone without them finding out.
+MC: 
+- I won’t let you down, Mr. President.
+- Sir, yes sir!
+Mr. President: Excellent! I knew I could count on you. Well, I have to go now; some personal matters have popped up on short notice. Toodles.
+set State.clock = 0
+=> end_conversation
+
+
+~ clock0
+=> no_phone
+~ clock1
+=> no_phone
+~ clock2
+=> no_phone
+~ clock3
+=> no_phone
+~ clock4
+=> no_phone
+~ clock5
+=> no_phone
+~ clock6
+=> no_phone
+~ clock7
+=> no_phone
+~ clock8
+=> no_phone
+~ clock9
+=> no_phone
+~ clock10
+=> no_phone
+~ clock11
+=> no_phone
+
+
+~ no_phone
+set State.location = ""
+Narrator: There is no one calling.
+=> end_conversation
+
+~ end_conversation
+set State.location = ""
+set State.player_speaking = false
+=> END

@@ -1,3 +1,5 @@
+~ clock200
+=> no_food_ready
 ~ clock0
 => no_food_ready
 ~ clock1
@@ -24,6 +26,7 @@
 => no_food_ready
 
 ~ no_food_ready
+set State.location = ""
 Narrator: Nothing to do here.
 => end_conversation
 

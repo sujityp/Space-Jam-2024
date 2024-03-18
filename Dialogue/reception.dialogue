@@ -215,6 +215,8 @@ set State.clock = State.clock + 1
 => empty_table
 ~ clock13
 => empty_table
+~ clock200
+=> empty_table
 
 
 

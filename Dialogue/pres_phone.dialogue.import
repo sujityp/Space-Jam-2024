@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://0p2e8crw0cm6"
+path="res://.godot/imported/pres_phone.dialogue-211d4d2a4608dd227a4622551564fdaf.tres"
+
+[deps]
+
+source_file="res://Dialogue/pres_phone.dialogue"
+dest_files=["res://.godot/imported/pres_phone.dialogue-211d4d2a4608dd227a4622551564fdaf.tres"]
+
+[params]
+
+defaults=true
