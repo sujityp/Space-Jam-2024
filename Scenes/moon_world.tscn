@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bfcj0h6tqntqp"]
+[gd_scene load_steps=33 format=3 uid="uid://bfcj0h6tqntqp"]
 
 [ext_resource type="PackedScene" uid="uid://b523lsqtbaqqv" path="res://Scenes/moon_tilemap.tscn" id="1_vi3ty"]
 [ext_resource type="PackedScene" uid="uid://ddf4537576310" path="res://Scenes/interior_tilemap.tscn" id="2_von8e"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://pxncnbyes63j" path="res://Assets/Art/7547889.png" id="14_7bt1s"]
 [ext_resource type="Script" path="res://Scenes/ParkingArea.gd" id="15_jmjq5"]
 [ext_resource type="Script" path="res://Scenes/ObjectiveLabel.gd" id="17_f37bc"]
+[ext_resource type="Script" path="res://Scenes/ReceptionSprites.gd" id="18_g70tm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tio4o"]
 size = Vector2(128, 21)
@@ -438,6 +439,113 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 script = ExtResource("17_f37bc")
+
+[node name="ReceptionSprites" type="Node2D" parent="."]
+script = ExtResource("18_g70tm")
+
+[node name="PresRec" type="Node2D" parent="ReceptionSprites"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-67, -177)
+
+[node name="SittingPresident" parent="ReceptionSprites/PresRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(-32.2401, 4.00001)
+
+[node name="SittingPresWife" parent="ReceptionSprites/PresRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(31.7599, 4.00001)
+frame = 1
+
+[node name="PamRec" type="Node2D" parent="ReceptionSprites"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-62, -157)
+
+[node name="SittingRacoon" parent="ReceptionSprites/PamRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(-4, 7)
+frame = 4
+
+[node name="SittingPuffer" parent="ReceptionSprites/PamRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(-67, -16)
+flip_h = true
+frame = 3
+
+[node name="SittingGecko" parent="ReceptionSprites/PamRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(61, -6)
+flip_h = true
+frame = 2
+
+[node name="JimRec" type="Node2D" parent="ReceptionSprites"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-67, -160)
+
+[node name="SittingBear" parent="ReceptionSprites/JimRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(-32, -5)
+frame = 11
+
+[node name="SittingBaboon" parent="ReceptionSprites/JimRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(32, -9)
+flip_h = true
+frame = 12
+region_rect = Rect2(0, 0, 204, 25)
+
+[node name="KidsRec" type="Node2D" parent="ReceptionSprites"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-63, -163)
+
+[node name="SittingPresKid" parent="ReceptionSprites/KidsRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(-63, -8)
+frame = 5
+
+[node name="SittingKid1" parent="ReceptionSprites/KidsRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(0.999998, -8)
+frame = 7
+
+[node name="SittingKid2" parent="ReceptionSprites/KidsRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(65, -8)
+flip_h = true
+frame = 6
+
+[node name="JRPGRec" type="Node2D" parent="ReceptionSprites"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-75, -169)
+
+[node name="SittingJ" parent="ReceptionSprites/JRPGRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(-59, 1)
+frame = 15
+
+[node name="SittingR" parent="ReceptionSprites/JRPGRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(-21, 19)
+frame = 14
+
+[node name="SittingP" parent="ReceptionSprites/JRPGRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(22, -4)
+frame = 16
+
+[node name="SittingG" parent="ReceptionSprites/JRPGRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(63, -4)
+frame = 13
+
+[node name="SciRec" type="Node2D" parent="ReceptionSprites"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-53, -169)
+
+[node name="SittingSloth" parent="ReceptionSprites/SciRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(-67, -4)
+flip_h = true
+frame = 8
+
+[node name="SittingFox" parent="ReceptionSprites/SciRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(-3, -2)
+frame = 9
+
+[node name="SittingParrot" parent="ReceptionSprites/SciRec" instance=ExtResource("13_r1lgw")]
+position = Vector2(61, 11)
+flip_h = true
+frame = 10
 
 [connection signal="area_entered" from="ParkingArea" to="ParkingArea" method="_on_area_entered"]
 [connection signal="area_exited" from="ParkingArea" to="ParkingArea" method="_on_area_exited"]
